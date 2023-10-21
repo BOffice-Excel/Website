@@ -2,12 +2,48 @@
 <html lang="zh-cn">
 	<head>
 		<title>Office-Excel的Minecraft服务器</title>
-		<link rel='icon' href="icon.png">
+		<link rel='icon' href="Icon.png">
+		<script>
+			var r=0,g=0,b=0,p=Math.PI;
+			function whileFun(){
+				document.getElementById('colorful').style.color="rgb("+r+","+g+","+b+")";
+				if(Math.floor(p%10)%2){
+					if(r==255) r=1;
+					else r++;
+				}
+				p*=10.0;
+				if(Math.floor(p%10)%2){
+					if(g==255) g=1;
+					else g++;
+				}
+				p*=10.0;
+				if(Math.floor(p%10)%2){
+					if(b==255) b=1;
+					else b++;
+				}
+				p*=10.0;
+			}
+            setInterval(function(){whileFun()},1);
+		</script>
+		<style>
+			.colorful{
+				animation: myfirst 5s;
+			}
+			@keyframes myfirst
+			{
+				from {color: red;}
+				to {color: yellow;}
+				from {color: yellow;}
+				to {color: blue;}
+				from {color: blue;}
+				to {color: red;}
+			}
+		</style>
 	</head>
 	<body style="background-color:white">
 		<div id="top" style="border-style:solid;border-color:black;border-width:1px;background-color:black;top:0%;height:40px;left:0%;position:fixed;width:100%">
 			<img style="position:relative;left:0%;width:40px;height:40px" src="Icon.png">
-			<span style="color:white;font-size:10px;position:relative;left:0;top:-15px">Office-Excel的个人网站</span>
+			<span style="color:white;font-size:10px;position:relative;left:0;top:-15px">Office-Excel的Minecraft服务器</span>
 			<a style="color:white;font-size:10px;position:relative;left:78%;top:-15px;" href="https://space.bilibili.com/1439352366">作者的B站主页</a>
 		</div>
 		<br>
@@ -33,21 +69,21 @@
 			<ul>
 				<li>1.0 服务器刚开版本1.16，玩家：XCY、SheFa_21，什么都没有，发了第一个介绍视频</li>
 				<li>1.1 因为过于无聊，升级成了1.16.5，安装了Forge+Create，KFCweek4、1、dong3leng加入了服务器，修建了高速熔炉+一堆奇怪的东西</li>
-				<li>1.2 还是太无聊，安装了Clumps（经验改革）、JEI（物品管理器）、Camera（A Working camera in the minecraft!），在遥远的地方造了主城</li>
-				<li>1.3 认为MC没有地铁不行，安装了MTR模组，修建了很长的地铁，XCY改名为Office-Excel</li>
+				<li>1.2 还是太无聊，安装了Clumps（经验改革）、JEI（物品管理器）、Camera（A Working camera in the minecraft!），在遥远的地方造了主城<del>，daowot加入了服务器</del></li>
+				<li>1.3 认为MC没有地铁不行，安装了MTR模组，修建了很长的地铁，XCY改名为Office-Excel，添加了[预制建筑] Prefab模组，开学了，大家都<del>下线了</del>高兴了</li>
 			</ul>
 			<hr>
 			<h2 id="mods">服务器模组</h2>
 			<span style="color:red">自己下千万不要下错版本！！！注意：architectury-1.32.68.jar和 [飞轮] flywheel-0.0.1.jar是前置模组！！！</span>
 			<ul>
-				<li><a href="https://www.curseforge.com/minecraft/mc-mods/architectury-api">architectury-1.32.68.jar</a></li>
-				<li><a href="https://www.curseforge.com/minecraft/mc-mods/jei">[JEI物品管理器] jei-1.16.5-7.8.0.1009.jar</a></li>
-				<li><a href="https://www.curseforge.com/minecraft/mc-mods/minecraft-transit-railway">[我的世界铁路] MTR-forge-1.16.5-3.2.2-hotfix-1.jar</a></li>
-				<li><a href="https://www.curseforge.com/minecraft/mc-mods/create">[机械动力] create-mc1.16.5_v0.3.2g.jar</a></li>
-				<li><a href="https://www.curseforge.com/minecraft/mc-mods/camera-mod">[照相机] camera-1.16.5-1.0.14.jar</a></li>
-				<li><a href="https://www.curseforge.com/minecraft/mc-mods/clumps">[经验机制改革] Clumps-6.0.0.28.jar</a></li>
-				<li><a href="https://www.curseforge.com/minecraft/mc-mods/prefab">[预制建筑] prefab-1.6.5.16.jar</a></li>
-				<li><a href="https://www.curseforge.com/minecraft/mc-mods/flywheel">[飞轮] flywheel-0.0.1.jar</a></li>
+				<li><a style="text-decoration:none;" class="colorful" href="https://www.curseforge.com/minecraft/mc-mods/architectury-api">architectury-1.32.68.jar</a></li>
+				<li><a style="text-decoration:none;" class="colorful" href="https://www.curseforge.com/minecraft/mc-mods/jei">[JEI物品管理器] jei-1.16.5-7.8.0.1009.jar</a></li>
+				<li><a style="text-decoration:none;" class="colorful" href="https://www.curseforge.com/minecraft/mc-mods/minecraft-transit-railway">[我的世界铁路] MTR-forge-1.16.5-3.2.2-hotfix-1.jar</a></li>
+				<li><a style="text-decoration:none;" class="colorful" href="https://www.curseforge.com/minecraft/mc-mods/create">[机械动力] create-mc1.16.5_v0.3.2g.jar</a></li>
+				<li><a style="text-decoration:none;" class="colorful" href="https://www.curseforge.com/minecraft/mc-mods/camera-mod">[照相机] camera-1.16.5-1.0.14.jar</a></li>
+				<li><a style="text-decoration:none;" class="colorful" href="https://www.curseforge.com/minecraft/mc-mods/clumps">[经验机制改革] Clumps-6.0.0.28.jar</a></li>
+				<li><a style="text-decoration:none;" class="colorful" href="https://www.curseforge.com/minecraft/mc-mods/prefab">[预制建筑] prefab-1.6.5.16.jar</a></li>
+				<li><a style="text-decoration:none;" class="colorful" href="https://www.curseforge.com/minecraft/mc-mods/flywheel">[飞轮] flywheel-0.0.1.jar</a></li>
 			</ul>
 			下载模组包（使用工具解压后直接扔到游戏的mods文件夹下）
 			<div onclick="window.open('https://pan.baidu.com/s/1iMXWuLawagyEEC5Z_R3bUw?pwd=3trn')" style="border-style:solid;border-color:black;border-width:2px;background-color:aqua;color:black;">高（蜗）速（牛）下载 提取码: 3trn</div>
@@ -57,11 +93,10 @@
 			<span>Q1：如果我的Minecraft启动后的多人游戏点不开怎么办？<br>A1：这种情况下你需要重启Minecraft，关闭MC后先断开网络，再打开MC，进入到主界面后进入多人游戏并重新打开网络就可以了</span><br><br>
 			<span>Q2：如果我的Minecraft在启动过程中崩溃了怎么办？<br>A2：这可能是你禁用了前置模组，或者Forge版本不匹配，你需要检查你是否禁用了某些前置模组，并确认Forge版本是36.2.39、Minecraft版本是1.16.5，如果仍然不行，请尝试重装游戏</span><br><br>
 			<span>Q3：如果进入时为0网状态或提示Connection to ***.aternos.hoset:56258应该怎么办？<br>A3：如果为0网状态，请等待1-2分钟连接，若为提示Connection to ***.aternos.hoset:56258，请使用其给予的网址访问</span>
+			<hr>
 			<h2 id="qq">交流群</h2>
 			<span>交流群（qq）：209716437</span><br><span>群二维码（SheFa_21提供）：</span><br>
 			<image src="qq.png"><br>
-			<span>交流群（微信）：群二维码（Office-Excel提供）：</span><br>
-			<image src="Wechat.png" style="width:200px;height: 200px;">
 		</div>
 	</body>
 </html>
