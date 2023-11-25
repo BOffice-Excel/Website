@@ -3,42 +3,6 @@
 	<head>
 		<title>Office-Excel的Minecraft服务器</title>
 		<link rel='icon' href="Icon.png">
-		<script>
-			var r=0,g=0,b=0,p=Math.PI;
-			function whileFun(){
-				document.getElementById('colorful').style.color="rgb("+r+","+g+","+b+")";
-				if(Math.floor(p%10)%2){
-					if(r==255) r=1;
-					else r++;
-				}
-				p*=10.0;
-				if(Math.floor(p%10)%2){
-					if(g==255) g=1;
-					else g++;
-				}
-				p*=10.0;
-				if(Math.floor(p%10)%2){
-					if(b==255) b=1;
-					else b++;
-				}
-				p*=10.0;
-			}
-            setInterval(function(){whileFun()},1);
-		</script>
-		<style>
-			.colorful{
-				animation: myfirst 5s;
-			}
-			@keyframes myfirst
-			{
-				from {color: red;}
-				to {color: yellow;}
-				from {color: yellow;}
-				to {color: blue;}
-				from {color: blue;}
-				to {color: red;}
-			}
-		</style>
 	</head>
 	<body style="background-color:white">
 		<div id="top" style="border-style:solid;border-color:black;border-width:1px;background-color:black;top:0%;height:40px;left:0%;position:fixed;width:100%">
@@ -84,6 +48,7 @@
 				<li><a style="text-decoration:none;" class="colorful" href="https://www.curseforge.com/minecraft/mc-mods/clumps">[经验机制改革] Clumps-6.0.0.28.jar</a></li>
 				<li><a style="text-decoration:none;" class="colorful" href="https://www.curseforge.com/minecraft/mc-mods/prefab">[预制建筑] prefab-1.6.5.16.jar</a></li>
 				<li><a style="text-decoration:none;" class="colorful" href="https://www.curseforge.com/minecraft/mc-mods/flywheel">[飞轮] flywheel-0.0.1.jar</a></li>
+				<li><a style="text-decoration:none;" class="colorful" href="https://www.curseforge.com/minecraft/mc-mods/prefab">[预制建筑] prefab-1.6.5.16</a></li>
 			</ul>
 			下载模组包（使用工具解压后直接扔到游戏的mods文件夹下）
 			<div onclick="window.open('https://pan.baidu.com/s/1iMXWuLawagyEEC5Z_R3bUw?pwd=3trn')" style="border-style:solid;border-color:black;border-width:2px;background-color:aqua;color:black;">高（蜗）速（牛）下载 提取码: 3trn</div>
