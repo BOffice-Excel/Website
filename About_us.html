@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <body style="background-image:linear-gradient(to right, red , yellow)">
+    <head>
+        <script>
+            function func1(){
+                var command=window.location.href;
+                command=command.split('?');
+                if(command.length==2){
+                    command=command[1];
+                    command=command.split('&');
+                    for(var i=0;i<command.length;i++){
+                        var href=command[i].split('=');
+                        if(href.length==1||href.length==0) continue;
+                        if(href[0]=='DarkMode'){
+                            if(href[1]=='true') document.getElementById('body').style.color='white';
+                            else document.getElementById('body').style.color='black';
+                        }
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body style="background-image:linear-gradient(to right, red , yellow)" id="body" onload="func1()">
         <center><h1>你好访客，这是我的个人网站</h1></center>
         <center><h2>请看以下的一大段文本（我相信你看不完）</h2></center>
         <div style="border-style: solid;border-width: 5px;">
