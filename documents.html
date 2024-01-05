@@ -53,12 +53,11 @@
             var DarkMode=false,d=1;
             var Title=new Array;
             var Time=new Array;
-            var Write=new Array,HeadIcon=new Array;
+            var Write=new Array;
             function init(){
                 Title=['我的Minecraft服务器主页支持管理员上传文档了！'];
                 Time=['2024-01-05'];
                 Write=['Office-Excel'];
-                HeadIcon=['https://i0.hdslb.com/bfs/face/9b45d31ed26efbb3c4efcf5d695edd5d57ecad8d.jpg@240w_240h_1c_1s_!web-avatar-nav.webp','https://i0.hdslb.com/bfs/face/93c943d55d17eebad7275c3fd81f581979d0248d.jpg','https://i1.hdslb.com/bfs/face/68223c8484171d8194159127f5761e48bf03edf5.jpg','https://i0.hdslb.com/bfs/face/member/noface.jpg']
             }
             function func1(){
                 var command=window.location.href;
@@ -93,12 +92,7 @@
                     span1.innerText=Title[i-1];
                     span2.innerText=Time[i-1];
                     icon.className="List_Icon";
-                    switch(Write[i-1]){
-                        case 'Office-Excel':icon.src=HeadIcon[0];break;
-                        case '1':icon.src=HeadIcon[1];break;
-                        case 'KFCweek4':icon.src=HeadIcon[2];break;
-                        case 'She_Fa21':icon.src=HeadIcon[3];break;
-                    }
+                    icon.src='documents\\HI\\'+Write[i-1]+'.jpg';
                     Writer.innerText=Write[i-1];
                     Writer.className="Writer_Name";
                     document.getElementById('Link'+i).appendChild(span1);
