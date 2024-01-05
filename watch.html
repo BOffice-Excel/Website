@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>跳转</title>
+        <script>
+            var c=window.location.search,d=c.split('?'),doc;
+            d=d[1].split('&');
+            for(let i=0;i<d.length;i++){
+                var command=d[i].split('=');
+                if(command[0]=='doc') doc=command[1];
+                else if(command[0]=='DarkMode') document.title='跳转 - '+command[1]+'.html',window.open('documents\\'+doc+'.html?DarkMode='+command[1],'_self',window);
+            }
+        </script>
+    </head>
+</html>
