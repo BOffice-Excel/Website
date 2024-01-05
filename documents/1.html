@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <body style="box-sizing: content-box;padding:0 60px 100px;margin-bottom: 0px;box-shadow: 0 6px 12px 0 rgba(0,0,0,0.3);">
+    <head>
+        <script>
+            var command=window.location.href;
+            function fun1(){
+                command=command.split('?');
+                if(command.length==2){
+                    command=command[1];
+                    command=command.split('&');
+                    for(var i=0;i<command.length;i++){
+                        var href=command[i].split('=');
+                        if(href.length==1||href.length==0) continue;
+                        if(href[0]=='DarkMode'){
+                            if(href[1]=='true') document.getElementById('body').style.color='white',document.getElementById('body').style.backgroundColor='black';
+                            else document.getElementById('body').style.color='black';
+                        }
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body style="box-sizing: content-box;padding:0 60px 100px;margin-bottom: 0px;box-shadow: 0 6px 12px 0 rgba(0,0,0,0.3);" onload="fun1()" id="body">
         <center><h1>我的Minecraft服务器主页支持管理员上传文档了！</h1></center>
         <img src="HI\Office-Excel.jpg" style="border-style: solid;border-radius: 50px;width:40px;border-color:transparent;">
         <span style="font-size: 25px;position: absolute;">Office-Excel</span>
