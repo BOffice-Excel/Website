@@ -54,6 +54,7 @@
             var Title=new Array;
             var Time=new Array;
             var Write=new Array;
+            var FindWord,isfind=false;
             function init(){
                 Title=['我的Minecraft服务器主页支持管理员上传文档了！'];
                 Time=['2024-01-05'];
@@ -72,6 +73,10 @@
                             if(href[1]=='true') document.getElementById('body').style.color='white',DarkMode=true,document.getElementById('body').style.backgroundColor='black';
                             else document.getElementById('body').style.color='black',document.getElementById('body').style.backgroundColor='white';
                         }
+                        else if(href[0]=='find'){
+                            isfind=true;
+                            FindWord=decodeURIComponent(href[1]);
+                        }
                     }
                 }
                 init();
@@ -79,6 +84,7 @@
             }
             function Load(){
                 for(let i=1;i<=d;i++){
+                    if(isfind==true&&!ishave(Title[i-1],FindWord)) continue;
                     let A_VAR=document.createElement('div'),span1=document.createElement('span'),span2=document.createElement('span'),br=document.createElement('br'),icon=document.createElement('img'),Writer=document.createElement('span');
                     A_VAR.className="List_Item";
                     let f = () =>{
@@ -101,6 +107,19 @@
                     document.getElementById('Link'+i).appendChild(icon);
                     document.getElementById('Link'+i).appendChild(Writer);
                 }
+            }
+            function ishave(string,find){
+                for(let i=0;i<string.length-find.length;i++){
+                    var yes=true;
+                    for(let j=0;j<find.length;j++){
+                        if(string[i+j]!=find[j]){
+                            yes=false;
+                            break;
+                        }
+                    }
+                    if(yes==true) return true;
+                }
+                return false;
             }
         </script>
     </head>

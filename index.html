@@ -3,7 +3,6 @@
     <head>
         <link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.css">
         <title>Excel的个人主页</title>
-		<link rel='icon' href="Icon.png">
         <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
         <style>
             .menu {
@@ -51,7 +50,7 @@
                     WhiteMode();
                     is_dark_mode=false;
                 }
-                SetURL(false);
+                SetURL();
             }
             function SwapSmile(){
                 if(document.getElementById('menu').style.width!='230px'){
@@ -60,6 +59,7 @@
                     document.getElementById('Bar_Text2').style.display='unset';
                     document.getElementById('Bar_Text3').style.display='unset';
                     document.getElementById('Bar_Text4').style.display='unset';
+                    document.getElementById('Bar_Text5').style.display='unset';
                 }
                 else{
                     $('.menu').animate({width:'60px'},'fast');
@@ -67,11 +67,11 @@
                     document.getElementById('Bar_Text2').style.display='none';
                     document.getElementById('Bar_Text3').style.display='none';
                     document.getElementById('Bar_Text4').style.display='none';
+                    document.getElementById('Bar_Text5').style.display='none';
                 }
             }
-            function SetURL(NewPage){
-                if(NewPage) document.getElementById('Main').src=Now_Src+'?DarkMode='+(is_dark_mode?'true':'false'); 
-                else document.getElementById('Main').src=document.getElementById('Main').src+'&DarkMode='+(is_dark_mode?'true':'false');
+            function SetURL(){
+                document.getElementById('Main').src=Now_Src+'?DarkMode='+(is_dark_mode?'true':'false'); 
             }
         </script>
     </head>
@@ -79,18 +79,19 @@
         <div class="menu" id="menu">
             <center><span style="font-size: 20px;">Excel</span></center>
             <div>
-                <div style="width: 94%;height: 60px;position: absolute;left: 2px;border-style:solid;border-radius: 5px;" onclick="Now_Src='MainPage.html';SetURL(true)"><center><i style="font-size: 50px" class="fa fa-home"><span id="Bar_Text1" style="font-size: 32px" class="hide">Home</span></i></center></div>
-                <div style="width: 94%;height: 60px;position: absolute;left: 2px;top: 90px;border-style:solid;border-radius: 5px;" onclick="Now_Src='documents.html';SetURL(true)"><center><i style="font-size: 50px" class="fa fa-file-text"><span id="Bar_Text2" style="font-size: 32px" class="hide">Documents</span></i></center></div>
-                <div style="width: 94%;height: 60px;position: absolute;left: 2px;top: 160px;border-style:solid;border-radius: 5px;" onclick="Now_Src='About_us.html';SetURL(true)"><center><i style="font-size: 50px" class="fa fa-question-circle"><span id="Bar_Text3" style="font-size: 32px" class="hide">About</span></i></center></div>
+                <div style="width: 94%;height: 60px;position: absolute;left: 2px;border-style:solid;border-radius: 5px;" onclick="Now_Src='MainPage.html';SetURL()"><center><i style="font-size: 50px" class="fa fa-home"><span id="Bar_Text1" style="font-size: 32px" class="hide">Home</span></i></center></div>
+                <div style="width: 94%;height: 60px;position: absolute;left: 2px;top: 90px;border-style:solid;border-radius: 5px;" onclick="Now_Src='documents.html';SetURL()"><center><i style="font-size: 50px" class="fa fa-file-text"><span id="Bar_Text2" style="font-size: 32px" class="hide">Documents</span></i></center></div>
+                <div style="width: 94%;height: 60px;position: absolute;left: 2px;top: 160px;border-style:solid;border-radius: 5px;" onclick="Now_Src='About_us.html';SetURL()"><center><i style="font-size: 50px" class="fa fa-question-circle"><span id="Bar_Text3" style="font-size: 32px" class="hide">About</span></i></center></div>
+                <div style="width: 94%;height: 60px;position: absolute;left: 2px;top: 230px;border-style:solid;border-radius: 5px;" onclick="Now_Src='Search.html';SetURL()"><center><i style="font-size: 50px" class="fa fa-search"><span id="Bar_Text5" style="font-size: 32px" class="hide">Find</span></i></center></div>
                 <!--以下是其他的小东西-->
-                <span style="position: absolute;left: 2px;top: 220px">明暗：</span>
-                <div style="width: 60px;height: 20px;position: absolute;left: 2px;top: 240px">
+                <span style="position: absolute;left: 2px;top: 300px">明暗：</span>
+                <div style="width: 60px;height: 20px;position: absolute;left: 2px;top: 325px">
                     <div style="border-radius: 15px;border-style: solid;height:100%;width:48px;background-color:gainsboro" id="dark_mode_border" onclick="SwapMode()">
                         <div style="border-radius: 15px;border-style: solid;width:15px;height:16px;background-color:white;position: absolute;" id="dark_mode"></div>
                     </div>
                 </div>
                 <br>
-                <div style="width: 60px;height: 60px;position: absolute;left: 2px;top: 290px"><center><a onclick="window.open('https://space.bilibili.com/1439352366')"><img src="https://www.bilibili.com/favicon.ico"></a></center></div>
+                <div style="width: 60px;height: 60px;position: absolute;left: 2px;top: 360px"><center><a onclick="window.open('https://space.bilibili.com/1439352366')"><img src="https://www.bilibili.com/favicon.ico"></a></center></div>
                 <br>
                 <!--fa fa-close & fa fa-bars-->
                 <div style="width: 60px;height: 60px;position:fixed;left:0px;bottom:0px" onclick="SwapSmile()"><center><i style="font-size: 50px;position: absolute;bottom: 0px;left:calc(50% - 22px)" class="fa fa-bars" id="Show"><span id="Bar_Text4" style="font-size: 32px;" class="hide">Close</span></i></center></div>
