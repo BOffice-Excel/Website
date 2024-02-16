@@ -1,1 +1,121 @@
-你居然发现了这里！这是一个CM的官方网站！
+<!DOCTYPE html>  
+<html lang="zh-CN">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>CM官方网站</title>
+    <style>  
+        body {  
+            font-family: Arial, sans-serif;  
+            margin: 0;  
+            padding: 0;  
+            background-color: /*#f0f0f0*/white;  
+        }  
+        .header {  
+            background-color: #333;  
+            color: #fff;  
+            padding: 20px;  
+            text-align: center;  
+        }  
+        .header h1 {  
+            margin: 0;  
+            font-size: 36px;  
+            animation: fadein 2s;  
+        }  
+        @keyframes fadein {  
+            from { opacity: 0; }  
+            to   { opacity: 1; }  
+        }  
+        .content {  
+            max-width: 1200px;  
+            margin: 20px auto;  
+            padding: 20px;  
+            background:linear-gradient(to left bottom,transparent 50%,rgba(0,0,0,.6) 0) no-repeat 100% 0 / 3em 3em,linear-gradient(225deg,transparent 2.1em,white 0);  
+            /*box-shadow: 0 0 10px rgba(0,0,0,0.1);  */
+            box-shadow: 0 3px 6px 0 rgba(0,0,0,0.3);
+        }  
+        .footer {  
+            background-color: #333;  
+            color: #fff;  
+            padding: 10px;  
+            text-align: center;  
+            position:fixed;
+            bottom:0px;
+            width:100%;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        li {
+            float: left;
+        }
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            user-select: none;
+        }
+        li a:hover {
+            background-color: #111;
+        }
+        .now {
+            background-color:#000;
+        }
+        .up_link {
+            color:gray;
+        }
+        .up_link:hover {
+            color:rgb(50,50,50);
+        }
+    </style>
+</head>  
+<body>  
+    <div class="header">  
+        <h1>欢迎来到CM官方网站</h1><br>
+        <center>
+        <div class="menu">
+            <ul>
+                <li class="now"><a>主页</a></li>
+                <li><a href="intro.html">介绍</a></li>
+                <li><a href="downloads.html">下载</a></li>
+                <li><a href="use.html">使用</a></li>
+                <li><a href="question.html">问题</a></li>
+                <li><a href="about.html">关于</a></li>
+            <ul>
+        </div>
+        </center>
+    </div>
+    <div class="content">
+        <p style="font-size:30px">CM（Command of minecraft Maker）是一个Windows平台中的Minecraft指令生成工具</p><center>
+        <p>
+            这个工具使用C++开发而成，没有GUI，<strong>只有一个控制台窗口作为程序的操作界面</strong><br>
+            因为我不会用Qt而且CreateWindow渲染出来的貌似不太好看<br>
+            指令大部分都是可以正常使用的，但是你也需要一点指令基础（比如不要在聊天框使用指令时不打斜杠）<br>
+            而且这个指令生成器不一定可以做出你需要的全部效果，所以<strong>请不要太高估它的实力</strong><br>
+            这个指令生成器应该算很大了，目前足足有几百KB，算是我目前写的一个比较大的项目了<br>
+            目前更新到Alpha3.0，Alpha4.0更新完成后将会把一个程序拆分个多个文件，比较好更新，因为服务器是Github的<br>
+            看不了Github的找我，我看看还有没有什么办法让你访问Github，你也可以尝试Watt Toolkit<br>
+            目前的CM还是单文件的，<strong>没有自动更新功能</strong>，不过也不用担心，有更新时你只需要<strong>在本网站下载</strong>最新版本就可以了<br>
+            你可以在“问题”那一栏找到部分的问题，这可能对你使用CM有所帮助<br>
+            <strong>不要喷我！不要喷我！不要喷我！我现在只是个六年级小学生，再说一遍：不要喷我！不要喷我！不要喷我！我知道我代码写的烂而且没She_Fa21写得好</strong><br>
+            这个项目是我自己突然产生了一个非常2B的想法然后开始做的，我C++学的真的不好，很多WinAPI我都没学会，而且我还不会写WinUI<br>
+            非常推荐你们去看看<span class="up_link" onclick="window.open('https://space.bilibili.com/3494376835648149/')">She_Fa21</span>大佬，他写代码很厉害的，还有<span class="up_link" onclick="window.open('https://space.bilibili.com/529804852/')">hope解说</span>、<span class="up_link" onclick="window.open('https://space.bilibili.com/2026207523/')">小王fly</span>和等UP主比我厉害多了（在此不一一列举），在他们面前我就是小巫见大巫<br>
+            <strong>本人不会承担任何由于您使用了CM之后产生的任何责任</strong><br>
+            She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！<br><br>
+            
+        </p></center>
+    </div>  
+    <div class="footer">
+        <p>版权所有 &copy; 2024 CM官方网站</p>  
+    </div>  
+    <script>  
+        // 可以在这里添加JavaScript代码来实现动态效果和交互功能  
+    </script>  
+</body>  
+</html>
