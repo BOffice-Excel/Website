@@ -81,9 +81,9 @@
         <center>
         <div class="menu">
             <ul>
-                <li class="now"><a>主页</a></li>
+                <li><a href="index.html">主页</a></li>
                 <li><a href="intro.html">介绍</a></li>
-                <li><a href="downloads.html">下载</a></li>
+                <li class="now"><a href="downloads.html">下载</a></li>
                 <li><a href="use.html">使用</a></li>
                 <li><a href="question.html">问题</a></li>
                 <li><a href="about.html">关于</a></li>
@@ -94,21 +94,28 @@
     <div class="content">
         <p style="font-size:30px">CM（Command of minecraft Maker）是一个Windows平台中的Minecraft指令生成工具</p><center>
         <p>
-            这个工具使用C++开发而成，没有GUI，<strong>只有一个控制台窗口作为程序的操作界面</strong><br>
-            因为我不会用Qt而且CreateWindow渲染出来的貌似不太好看<br>
-            指令大部分都是可以正常使用的，但是你也需要一点指令基础（比如不要在聊天框使用指令时不打斜杠）<br>
-            而且这个指令生成器不一定可以做出你需要的全部效果，所以<strong>请不要太高估它的实力</strong><br>
-            这个指令生成器应该算很大了，目前足足有几百KB，算是我目前写的一个比较大的项目了<br>
-            目前更新到Alpha3.0，Alpha4.0更新完成后将会把一个程序拆分个多个文件，比较好更新，因为服务器是Github的<br>
-            看不了Github的找我，我看看还有没有什么办法让你访问Github，你也可以尝试Watt Toolkit<br>
-            目前的CM还是单文件的，<strong>没有自动更新功能</strong>，不过也不用担心，有更新时你只需要<strong>在本网站下载</strong>最新版本就可以了<br>
-            你可以在“问题”那一栏找到部分的问题，这可能对你使用CM有所帮助<br>
-            <strong>不要喷我！不要喷我！不要喷我！我现在只是个六年级小学生，再说一遍：不要喷我！不要喷我！不要喷我！我知道我代码写的烂而且没She_Fa21写得好</strong><br>
-            这个项目是我自己突然产生了一个非常2B的想法然后开始做的，我C++学的真的不好，很多WinAPI我都没学会，而且我还不会写WinUI<br>
-            非常推荐你们去看看<span class="up_link" onclick="window.open('https://space.bilibili.com/3494376835648149/')">She_Fa21</span>大佬，他写代码很厉害的，还有<span class="up_link" onclick="window.open('https://space.bilibili.com/529804852/')">hope解说</span>、<span class="up_link" onclick="window.open('https://space.bilibili.com/2026207523/')">小王fly</span>和等UP主比我厉害多了（在此不一一列举），在他们面前我就是小巫见大巫<br>
-            <strong>本人不会承担任何由于您使用了CM之后产生的任何责任</strong><br>
-            She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！She_Fa21牛逼！<br><br>
-            
+            <button style="font-size:30px" onclick="document.getElementById('download_text').style.display='unset'"><a style="text-decoration: none;color:black" href="downloads\CM_Alpha0.3.exe" download>下载最新版本</a></button><span>（Alpha0.3）</span><br>
+            <p style="font-size:20px;display:none" id="download_text">欢迎使用我们的CM，感谢您对我们提出意见</p>
+            <p>历史版本下载：</p>
+            <table style="border-style: solid;border-width: 3px;border-collapse: collapse;font-size:20px">
+                <tr>
+                    <td style="border-style: solid;border-width: 3px;">版本（点此下载）</td>
+                    <td style="border-style: solid;border-width: 3px;">更新时间</td>
+                </tr>
+                <tr>
+                    <td style="border-style: solid;border-width: 3px;"><a style="text-decoration: none;color:black" href="downloads\CM_Alpha0.3.exe" download>Alpha0.3</a></td>
+                    <td style="border-style: solid;border-width: 3px;">2024/02/06</td>
+                </tr>
+                <tr>
+                    <td style="border-style: solid;border-width: 3px;"><a style="text-decoration: none;color:black" href="downloads\CM_Alpha0.2.exe" download>Alpha0.2</a></td>
+                    <td style="border-style: solid;border-width: 3px;">2024/01/26</td>
+                </tr>
+                <tr>
+                    <td style="border-style: solid;border-width: 3px;"><a style="text-decoration: none;color:black" href="downloads\CM_Alpha0.1.exe" download>Alpha0.1</a></td>
+                    <td style="border-style: solid;border-width: 3px;">2024/01/25</td>
+                </tr>
+            </table>
+            <iframe src="downloads\update.html" style="width:100%;height:500px;border:none;background-color: white;color:black"></iframe><br><br>
         </p></center>
     </div>  
     <div class="footer">
