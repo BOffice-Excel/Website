@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="images/favicon.ico">
+        <title>Get DWPT | A Dynamic Wallpaper Tool</title>
+        <style>
+            .navigation{
+                list-style-type: none;
+                list-style-position: inside;
+                margin: 0;
+                padding: 0;
+            }
+            .navigation li{
+                text-align: center;
+                padding: 0;
+                transition: transform .1s linear;
+                position: relative;
+                display: list-item;
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-top: 20px;
+            }
+            .navigation li a:hover{
+                color:#367BF0;
+            }
+            .dnl{
+                float: left;
+            }
+            *{
+                color:white
+            }/*
+            img{
+                image-rendering: pixelated;
+            }*/
+            .navigation li a{
+                text-decoration: solid;
+            }
+        </style>
+        <style>
+            /* From extension vscode.github */
+            /*---------------------------------------------------------------------------------------------
+             *  Copyright (c) Microsoft Corporation. All rights reserved.
+             *  Licensed under the MIT License. See License.txt in the project root for license information.
+             *--------------------------------------------------------------------------------------------*/
+            
+            .vscode-dark img[src$=\#gh-light-mode-only],
+            .vscode-light img[src$=\#gh-dark-mode-only],
+            .vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+            .vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+                display: none;
+            }
+            
+        </style>
+                        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        <style>
+            body {
+                font-family: 'Hack Nerd Font';
+                font-size: 14px;
+                line-height: 1.6;
+            }
+            .task-list-item {
+                list-style-type: none;
+            }
+            
+            .task-list-item-checkbox {
+                margin-left: -20px;
+                vertical-align: middle;
+                pointer-events: none;
+            }
+            :root {
+              --color-note: #0969da;
+              --color-tip: #1a7f37;
+              --color-warning: #9a6700;
+              --color-severe: #bc4c00;
+              --color-caution: #d1242f;
+              --color-important: #8250df;
+            }
+            @media (prefers-color-scheme: dark) {
+              :root {
+                --color-note: #2f81f7;
+                --color-tip: #3fb950;
+                --color-warning: #d29922;
+                --color-severe: #db6d28;
+                --color-caution: #f85149;
+                --color-important: #a371f7;
+              }
+            }
+            .markdown-alert {
+              padding: 0.5rem 1rem;
+              margin-bottom: 16px;
+              color: inherit;
+              border-left: .25em solid #888;
+            }
+            
+            .markdown-alert>:first-child {
+              margin-top: 0
+            }
+            
+            .markdown-alert>:last-child {
+              margin-bottom: 0
+            }
+            
+            .markdown-alert .markdown-alert-title {
+              display: flex;
+              font-weight: 500;
+              align-items: center;
+              line-height: 1
+            }
+            
+            .markdown-alert .markdown-alert-title .octicon {
+              margin-right: 0.5rem;
+              display: inline-block;
+              overflow: visible !important;
+              vertical-align: text-bottom;
+              fill: currentColor;
+            }
+            
+            .markdown-alert.markdown-alert-note {
+              border-left-color: var(--color-note);
+            }
+            
+            .markdown-alert.markdown-alert-note .markdown-alert-title {
+              color: var(--color-note);
+            }
+            
+            .markdown-alert.markdown-alert-important {
+              border-left-color: var(--color-important);
+            }
+            
+            .markdown-alert.markdown-alert-important .markdown-alert-title {
+              color: var(--color-important);
+            }
+            
+            .markdown-alert.markdown-alert-warning {
+              border-left-color: var(--color-warning);
+            }
+            
+            .markdown-alert.markdown-alert-warning .markdown-alert-title {
+              color: var(--color-warning);
+            }
+            
+            .markdown-alert.markdown-alert-tip {
+              border-left-color: var(--color-tip);
+            }
+            
+            .markdown-alert.markdown-alert-tip .markdown-alert-title {
+              color: var(--color-tip);
+            }
+            
+            .markdown-alert.markdown-alert-caution {
+              border-left-color: var(--color-caution);
+            }
+            
+            .markdown-alert.markdown-alert-caution .markdown-alert-title {
+              color: var(--color-caution);
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="titleBar" style="position:fixed;top:0px;left:0px;width:100%;z-index:9999">
+            <a href="../index.html" style="background-image: url('../images/favicon.ico');width:60px;height:60px;margin-left:5%;display:block" class="dnl"></a>
+            <!--<span class="dnl" style="margin-top:20px;margin-left:10px">DWPT(A dynamic wallpaper tool)</span>-->
+            <ul id="PageChoose" class="navigation" style="right:20px;position:absolute">
+                <li class="dnl"><a href="../index.html">HOME</a></li>
+                <li class="dnl"><a href="../get-dwpt.html">GET DWPT</a></li>
+                <li class="dnl"><a href="../docs.html">DOCUMENTATION</a></li>
+                <li class="dnl"><a href="../developers.html">DEVELOPERS</a></li>
+                <li class="dnl"><a href="../about.html">ABOUT</a></li>
+            </ul>
+        </div>
+        <div id="main" style="left:0px;top:0px;height:2000px;width:100%;background-color:black;position:absolute">
+            <div style="margin-top:50px">
+                <center><span style="font-weight: lighter;font-size:45px">Using <strong>Command Prompt</strong> install DWPT.</span></center><br>
+                <ol style="padding-left:10%;width:80%">
+                    <li>
+                        <p>Confirm that your system is Win7 or above</p>
+                        <p>If you don't know how to get your system version, just follow me:</p>
+                        <ol>
+                            <li>
+                                <p>Press the Windows micro key and R key to open the 'Run'.</p>
+                                <p>It will like this:</p>
+                                <p><img src="../images/Run.png" alt="Run"></p>
+                            </li>
+                            <li>
+                                <p>Type &quot;winver.exe&quot; to the input box.</p>
+                            </li>
+                            <li>
+                                <p>Press Enter key.</p>
+                                <p>It will look like this:</p>
+                                <p><img src="../images/WinVer.png" alt="WinVer"></p>
+                            </li>
+                            <li>
+                                <p>That is it!</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Open the command prompt</p>
+                        <p>Just open your start menu, find the command prompt and open it with the Administrator privileges.</p>
+                    </li>
+                    <li>
+                        <p>Download the installer</p>
+                        <pre><code class="language-bash">certutil.exe -urlcache -<span class="hljs-built_in">split</span> -f https://github.com/BOffice-Excel/Excel-s-Dynamic-Wallpaper-Tools/releases/download/v0.0.8.0/DWPT_Installer.exe %TEMP%\DWPT_Installer.exe</code></pre>
+                        <p>You must wait for some time to download file.</p>
+                    </li>
+                    <li>
+                        <p>Install program</p>
+                        <pre><code class="language-bash">start %TEMP%\DWPT_Installer.exe /verysilent</code></pre>
+                        <p>Then choose your install mode. We can choose install for yourself and install for everyone.</p>
+                        <p>And DWPT is installed to your computer successfully!</p>
+                    </li>
+                </ol>     
+            </div>
+        </div>
+    </body>
+</html>

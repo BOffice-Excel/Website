@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="images/favicon.ico">
+        <title>DWPT | A Dynamic Wallpaper Tool</title>
+        <style>
+            body {
+                font-family: 'Hack Nerd Font';
+            }
+            .navigation{
+                list-style-type: none;
+                list-style-position: inside;
+                margin: 0;
+                padding: 0;
+            }
+            .navigation li{
+                text-align: center;
+                padding: 0;
+                transition: transform .1s linear;
+                position: relative;
+                display: list-item;
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-top: 20px;
+            }
+            .navigation li a:hover{
+                color:#367BF0;
+            }
+            .dnl{
+                float: left;
+            }
+            *{
+                color:white
+            }
+            img{
+                image-rendering: pixelated;
+            }
+            .navigation li a{
+                text-decoration: solid;
+            }
+            .method{
+                margin-top:2%;
+                margin-left:50px;
+                margin-right:50px
+            }
+        </style>
+    </head>
+    <body>
+        <div id="titleBar" style="position:fixed;top:0px;left:0px;width:100%;z-index:9999">
+            <a href="index.html" style="background-image: url('images/favicon.ico');width:60px;height:60px;margin-left:5%;display:block" class="dnl"></a>
+            <!--<span class="dnl" style="margin-top:20px;margin-left:10px">DWPT(A dynamic wallpaper tool)</span>-->
+            <ul id="PageChoose" class="navigation" style="right:20px;position:absolute">
+                <li class="dnl"><a href="index.html">HOME</a></li>
+                <li class="dnl"><a style="color:#367BF0;user-select: none;cursor:default;">GET DWPT</a></li>
+                <li class="dnl"><a href="docs.html">DOCUMENTATION</a></li>
+                <li class="dnl"><a href="developers.html">DEVELOPERS</a></li>
+                <li class="dnl"><a href="about.html">ABOUT</a></li>
+            </ul>
+        </div>
+        <div id="main" style="left:0px;top:0px;height:100%;width:100%;background-color:black;position:absolute">
+            <center style="margin-top:10%">
+                <span style="font-weight: lighter;font-size:45px">Choose <strong>your</strong> install method.</span>
+                <div style="display:flex;width:100%;height:auto;flex-direction:row;direction: ltr;justify-content: center;">
+                    <div style="border-width:5px;border-radius: 5px;border-style:solid" class="method">
+                        <img src="https://github.githubassets.com/favicons/favicon.svg" style="opacity: 1;filter: brightness(10);width:200px;height:auto"/><br>
+                        <span style="font-size:50px">Download DWPT<br>on <a href="https://github.com/" title="Jump to Github." target="_blank"><strong>Github</strong></a> Release</span><br>
+                        <span style="font-size:20px">The most recommended way.</span><br>
+                        <button style="color:black;font-size:50px" onclick="window.open('https://github.com/BOffice-Excel/Excel-s-Dynamic-Wallpaper-Tools/releases')">Open</button>
+                    </div>
+                    <div style="border-width:5px;border-radius: 5px;border-style:solid" class="method">
+                        <img src="images/cmd.ico" style="filter: brightness(1);width:200px;height:auto"/><br>
+                        <span style="font-size:50px">Download DWPT<br>using cmd.exe</span><br>
+                        <span style="font-size:20px">We use command!</span><br>
+                        <button style="color:black;font-size:50px" onclick="window.open('get-dwpt/command.html','_self',self)">Open</button>
+                    </div>
+                </div>
+            </center>
+        </div>
+    </body>
+</html>

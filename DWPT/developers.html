@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="images/favicon.ico">
+        <title>DEVELOPERS | A Dynamic Wallpaper Tool</title>
+        <style>
+            .navigation{
+                list-style-type: none;
+                list-style-position: inside;
+                margin: 0;
+                padding: 0;
+            }
+            .navigation li{
+                text-align: center;
+                padding: 0;
+                transition: transform .1s linear;
+                position: relative;
+                display: list-item;
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-top: 20px;
+            }
+            .navigation li a:hover{
+                color:#367BF0;
+            }
+            .dnl{
+                float: left;
+            }
+            *{
+                color:white
+            }
+            img{
+                image-rendering: pixelated;
+            }
+            .navigation li a{
+                text-decoration: solid;
+            }
+        </style>
+        <style>
+            /* From extension vscode.github */
+            /*---------------------------------------------------------------------------------------------
+             *  Copyright (c) Microsoft Corporation. All rights reserved.
+             *  Licensed under the MIT License. See License.txt in the project root for license information.
+             *--------------------------------------------------------------------------------------------*/
+            
+            .vscode-dark img[src$=\#gh-light-mode-only],
+            .vscode-light img[src$=\#gh-dark-mode-only],
+            .vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+            .vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+                display: none;
+            }
+        </style>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        <style>
+            body {
+                font-family: 'Hack Nerd Font';
+            }
+            .task-list-item {
+                list-style-type: none;
+            }
+            
+            .task-list-item-checkbox {
+                margin-left: -20px;
+                vertical-align: middle;
+                pointer-events: none;
+            }
+            :root {
+              --color-note: #0969da;
+              --color-tip: #1a7f37;
+              --color-warning: #9a6700;
+              --color-severe: #bc4c00;
+              --color-caution: #d1242f;
+              --color-important: #8250df;
+            }
+            @media (prefers-color-scheme: dark) {
+              :root {
+                --color-note: #2f81f7;
+                --color-tip: #3fb950;
+                --color-warning: #d29922;
+                --color-severe: #db6d28;
+                --color-caution: #f85149;
+                --color-important: #a371f7;
+              }
+            }
+            
+            </style>
+            <style>
+            .markdown-alert {
+              padding: 0.5rem 1rem;
+              margin-bottom: 16px;
+              color: inherit;
+              border-left: .25em solid #888;
+            }
+            
+            .markdown-alert>:first-child {
+              margin-top: 0
+            }
+            
+            .markdown-alert>:last-child {
+              margin-bottom: 0
+            }
+            
+            .markdown-alert .markdown-alert-title {
+              display: flex;
+              font-weight: 500;
+              align-items: center;
+              line-height: 1
+            }
+            
+            .markdown-alert .markdown-alert-title .octicon {
+              margin-right: 0.5rem;
+              display: inline-block;
+              overflow: visible !important;
+              vertical-align: text-bottom;
+              fill: currentColor;
+            }
+            
+            .markdown-alert.markdown-alert-note {
+              border-left-color: var(--color-note);
+            }
+            
+            .markdown-alert.markdown-alert-note .markdown-alert-title {
+              color: var(--color-note);
+            }
+            
+            .markdown-alert.markdown-alert-important {
+              border-left-color: var(--color-important);
+            }
+            
+            .markdown-alert.markdown-alert-important .markdown-alert-title {
+              color: var(--color-important);
+            }
+            
+            .markdown-alert.markdown-alert-warning {
+              border-left-color: var(--color-warning);
+            }
+            
+            .markdown-alert.markdown-alert-warning .markdown-alert-title {
+              color: var(--color-warning);
+            }
+            
+            .markdown-alert.markdown-alert-tip {
+              border-left-color: var(--color-tip);
+            }
+            
+            .markdown-alert.markdown-alert-tip .markdown-alert-title {
+              color: var(--color-tip);
+            }
+            
+            .markdown-alert.markdown-alert-caution {
+              border-left-color: var(--color-caution);
+            }
+            
+            .markdown-alert.markdown-alert-caution .markdown-alert-title {
+              color: var(--color-caution);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="titleBar" style="position:fixed;top:0px;left:0px;width:100%;z-index:9999">
+            <a href="index.html" style="background-image: url('images/favicon.ico');width:60px;height:60px;margin-left:5%;display:block" class="dnl"></a>
+            <!--<span class="dnl" style="margin-top:20px;margin-left:10px">DWPT(A dynamic wallpaper tool)</span>-->
+            <ul id="PageChoose" class="navigation" style="right:20px;position:absolute">
+                <li class="dnl"><a href="index.html">HOME</a></li>
+                <li class="dnl"><a href="get-dwpt.html">GET DWPT</a></li>
+                <li class="dnl"><a href="docs.html">DOCUMENTATION</a></li>
+                <li class="dnl"><a style="color:#367BF0;user-select: none;cursor:default;">DEVELOPERS</a></li>
+                <li class="dnl"><a href="about.html">ABOUT</a></li>
+            </ul>
+        </div>
+        <div id="main" style="left:0px;top:0px;height:9800px;width:100%;background-color:black;position:absolute">
+            <center style="padding-top:70px;font-size:50px;"><span>Make the dynamic wallpaper tools for <strong>yourself</strong>.</span></center>
+            <div class="vscode-body vscode-night" style="margin-top:40px;padding-left:10%;width:80%">
+                <p><a href="#%E4%B8%AD%E6%96%87">转到中文文档</a></p>
+                <h1 id="English">English</h1>
+                <blockquote>
+                    <p>if you have any doubts or suggestions, please go to <a href="https://github.com/BOffice-Excel/Excel-s-Dynamic-Wallpaper-Tools/issues">Issues</a> submit</p>
+                    <p>To download, please open <a href="https://github.com/BOffice-Excel/Excel-s-Dynamic-Wallpaper-Tools/releases">Releases</a></p>
+                </blockquote>
+                <h1 id="office-excels-dynamic-wallpaper-tool">Office-Excel's dynamic wallpaper tool</h1>
+                <blockquote>
+                    <p>Introduction: This is a dynamic wallpaper tool written in C++, which can now be used
+                    Special thanks to the Bilibili user<a href="https://space.bilibili.com/39665558/">@偶尔有点小迷糊</a>(Uid39665558), reference project: <a href="https://github.com/3150601355/VideoWallPaperDemo">https://github.com/3150601355/VideoWallPaperDemo</a></p>
+                    <p>Compiling environment: Windows 11 IDE: Dev-C++Compiler: TDM-GCC 4.9.2 32-bit Release It can be compiled in a higher version, but it is not necessary.4.9.2 is enough and there is no need to do anything during compilation.I have already configured the link library</p>
+                    <p>Now there is a very good thing, which is that you can create your own dynamic wallpaper tool by including dll.h in the Wallpaper Core folder.Remember to link the library: libWallpaper Core.a
+                    Tip: It is recommended to use ANSI(GBK)to open the code, otherwise the comments inside will be mostly garbled</p>
+                    <p>Attention:
+                    It is not recommended to use Visual Studio for compilation.Many changes need to be made, otherwise errors may occur, such as unsafe
+                    In theory, anything that can compile C++is acceptable, but it is not recommended as it may result in garbled code or errors
+                    I have already compiled it in the nearby Release, and it should be compatible with both Windows 8 x86 and Windows 11 x64</p>
+                    <p>The header files used are: std io.h io.h、windows.h、commctrl.h， That's all
+                    You can take a look at the help within the program yourself</p>
+                </blockquote>
+                <h1 id="developing-with-wallpapercoredll">Developing with WallpaperCore.dll</h1>
+                <blockquote>
+                    <h1 id="1principle-of-dynamic-wallpaperbrief-introduction">1.Principle of Dynamic Wallpaper(Brief Introduction)</h1>
+                    <h1 id="1startup-of-dynamic-wallpaper">1.Startup of Dynamic Wallpaper</h1>
+                    <blockquote>
+                        <blockquote>
+                            <h1 id="1-1creating-a-video-window">1-1.Creating a Video Window</h1>
+                        </blockquote>
+                    </blockquote>
+                    <p>Here, we use the <a href="https://learn.microsoft.com/zh-cn/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa">CreateProcessA Function</a> to create a process, using mshta.exe as a video playback tool demonstration(ffplay can also be used)</p>
+                    <blockquote>
+                        <blockquote>
+                            <blockquote></blockquote>
+                        </blockquote>
+                    </blockquote>
+                    <p>The following code will start mshta.exe without doing anything else:</p>
+                    <blockquote>
+                        <blockquote>
+                            <blockquote>
+                                <pre><code class="language-C++">  STARTUPINFOA sia,<span class="hljs-built_in">memset</span>(&amp;sia,<span class="hljs-number">0</span>,<span class="hljs-built_in">sizeof</span>(sia));<span class="hljs-comment">// Initialize information structure</span>
+  PROCESS_INFORMATIONA pia;<span class="hljs-built_in">memset</span>(&amp;pia,<span class="hljs-number">0</span>,<span class="hljs-built_in">sizeof</span>(pia));
+  <span class="hljs-type">char</span> mshtaPath[MAX_PATH+<span class="hljs-number">5</span>];<span class="hljs-comment">// Please try to make it bigger here</span>
+  <span class="hljs-built_in">GetSystemDirectory</span>(mshtaPath, MAX-PATH);<span class="hljs-comment">//Get the System(System32)directory.On 64 bit systems, 32-bit programs will become SysWOW64 directory.//Replace MAX-PATH with your array length of -5(preferably)</span>
+  <span class="hljs-keyword">if</span>(mshtaPath[<span class="hljs-built_in">strlen</span>(mshtaPath)<span class="hljs-number">-1</span>]==<span class="hljs-string">&#x27;\\&#x27;</span>) <span class="hljs-built_in">strcat</span>(mshtaPath,<span class="hljs-string">&quot;mshta.exe&quot;</span>);
+  <span class="hljs-keyword">else</span> <span class="hljs-built_in">strcat</span>(mshtaPath,<span class="hljs-string">&quot;\\mshta.exe&quot;</span>);
+  <span class="hljs-keyword">if</span>(<span class="hljs-built_in">CreateProcess</span>(mshtaPath,<span class="hljs-literal">NULL</span>,<span class="hljs-literal">NULL</span>,<span class="hljs-literal">NULL</span>,<span class="hljs-literal">NULL</span>,<span class="hljs-literal">NULL</span>,<span class="hljs-literal">NULL</span>,<span class="hljs-literal">NULL</span>,&amp;sia,&amp;pia)!=<span class="hljs-number">0</span>){
+    <span class="hljs-comment">//Successfully started the process</span>
+  }
+  <span class="hljs-keyword">else</span>{
+    <span class="hljs-comment">//Start process failed</span>
+  }
+                                </code></pre>
+                            <p>if you successfully compile the program, you will find that there is nothing, because we did not write an HTA file(HTML application, similar to HTML syntax)for video playback for mshta.exe.The video webpage format is as follows:</p>
+                            <pre><code class="language-HTML">  <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">META</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">&quot;content-type&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;text/html; charset=GBK&quot;</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- This is to set mshta.exe to use GBK encoding(default UTF-8)when reading HTA files.if you are using Visual Studio, you can skip the above line(VS default UTF-8)--&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">&quot;x-ua-compatible&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;IE=9&quot;</span>/&gt;</span>
+    <span class="hljs-comment">&lt;!-- This is the IE version for setting mshta.exe, IE=&lt;version number&gt;, you can fill in &quot;Edge&quot;.The default version of mshta.exe does not support Video tags --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>VideoPlayer<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+      <span class="hljs-comment">&lt;!-- The above item cannot be seen by actual users, so it is not necessary to write --&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">HTA:APPLICATION</span> <span class="hljs-attr">APPLICATIONNAME</span>=<span class="hljs-string">&quot;VideoPlayer&quot;</span><span class="hljs-attr">ID</span>=<span class="hljs-string">&quot;VideoPlayer&quot;</span> <span class="hljs-attr">BORDER</span>=<span class="hljs-string">&quot;none&quot;</span> <span class="hljs-attr">SHOWINTASKBAR</span>=<span class="hljs-string">&quot;no&quot;</span> <span class="hljs-attr">VERSION</span>=<span class="hljs-string">&quot;0.0&quot;</span>/&gt;</span>
+      <span class="hljs-comment">&lt;!-- The above setting has no borders, does not display on the taskbar, ID is VideoPlayer, version is 0.0, name is VideoPlayer, version, name can be changed freely --&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 100%; height: 100%; left: 0px; top: 0px; position: fixed&quot;</span> <span class="hljs-attr">autoplay</span> <span class="hljs-attr">loop</span> [<span class="hljs-attr">mutated</span>]&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;&lt;insert video address here&gt;&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;video/mp4&quot;</span>&gt;</span>ERROR<span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
+      <span class="hljs-comment">&lt;!-- Please replace the internal information in a reasonable way when playing the video above.if muted is added, it means it is muted--&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+                            </code></pre>
+                            <p>Now you can open your edited hta file, so you can see a borderless video window(Alt+F4 to exit)
+                            The following code shows how to use the program to open an hta file</p>
+                            <pre><code class="language-C++">  STARTUPINFOA sia;<span class="hljs-built_in">memset</span>(&amp;sia,<span class="hljs-number">0</span>,<span class="hljs-built_in">sizeof</span>(sia));<span class="hljs-comment">// Initialize information structure</span>
+  PROCESS_INFORMATIONA pia;<span class="hljs-built_in">memset</span>(&amp;pia,<span class="hljs-number">0</span>,<span class="hljs-built_in">sizeof</span>(pia));
+  <span class="hljs-type">char</span> mshtaPath[MAX_PATH+<span class="hljs-number">5</span>];<span class="hljs-comment">// Please try to make it bigger here</span>
+  <span class="hljs-built_in">GetSystemDirectory</span>(mshtaPath, MAX_PATH);<span class="hljs-comment">//Get the System(System32)directory.On 64 bit systems, 32-bit programs will become SysWOW64 directory.//Replace MAX_PATH with your array length of -5(preferably)</span>
+  <span class="hljs-keyword">if</span>(mshtaPath[<span class="hljs-built_in">strlen</span>(mshtaPath)<span class="hljs-number">-1</span>]==<span class="hljs-string">&#x27;\\&#x27;</span>) <span class="hljs-built_in">strcat</span>(mshtaPath,<span class="hljs-string">&quot;mshta.exe &quot;</span>);
+  <span class="hljs-keyword">else</span> <span class="hljs-built_in">strcat</span>(mshtaPath,<span class="hljs-string">&quot;\\mshta.exe &quot;</span>);
+  <span class="hljs-keyword">if</span>(<span class="hljs-built_in">CreateProcess</span>(mshtaPath,&lt;write your hta file path here, <span class="hljs-keyword">if</span> there are special characters <span class="hljs-keyword">or</span> symbols, add quotation marks&gt;, <span class="hljs-literal">NULL</span>, <span class="hljs-literal">NULL</span>, <span class="hljs-literal">NULL</span>, <span class="hljs-literal">NULL</span>,&amp;sia,&amp;pia)!=<span class="hljs-number">0</span>){
+    <span class="hljs-comment">//Successfully started the process</span>
+  }
+  <span class="hljs-keyword">else</span>{
+    <span class="hljs-comment">//Start process failed</span>
+  }
+                            </code></pre>
+                            <p>After compiling and running, you can see that the program has opened a video <a href="http://window.At">window.At</a> this point, you have already succeeded halfway.if there is no window creation, please check the video file path</p>
+                        </blockquote>
+                        <h1 id="1-2set-background">1-2.Set Background</h1>
+                        <blockquote>
+                            <p>Now there is a question: how to obtain the window handle created by mshta.exe?</p>
+                            <p>The method used in DWPT is FindWindow.However, this only applies to cases where there is only one mshta.exe window.Through the Spy++ tool, we can know that the window class name of mshta.exe is &quot;HTML Application Host Window Class&quot;</p>
+                            <p>So we can add the following code after creating the process code:</p>
+                            <pre><code class="language-C++">  HWND hMshta=<span class="hljs-built_in">FindWindow</span>(<span class="hljs-string">&quot;HTML Application Host Window Class&quot;</span>, <span class="hljs-number">0</span>);
+  <span class="hljs-keyword">while</span>(hMshta==<span class="hljs-literal">NULL</span>){<span class="hljs-comment">//until the window for mshta is found</span>
+    <span class="hljs-built_in">Sleep</span>(<span class="hljs-number">500</span>);
+    hMshta=<span class="hljs-built_in">FindWindow</span>(<span class="hljs-string">&quot;HTML Application Host Window Class&quot;</span>, <span class="hljs-number">0</span>);
+  }
+  <span class="hljs-comment">//Found</span>
+                            </code></pre>
+                            <p>The window handle of mshta.exe is stored in hMshta.Alright, now the first problem has been solved.The second problem is how to put it in</p>
+                            <p>The method I used here comes from the Bilibili user <a href="https://space.bilibili.com/39665558/">@偶尔有点小迷糊</a>（Uid39665558）</p>
+                            <p>First, send the 0x52C message to the window with the class name Progman, and then use SendMessageTimeout(SendMessage, I don't know whether it is OK or not)to send it.Then adjust the size of the mshta.exe window, set the parent window to Progman, and finally hide the window with the class name WorkerW,
+                            For those who are confused, you can go to [Confused Teacher's Video]（ <a href="https://www.bilibili.com/video/BV1HZ4y1978a/">https://www.bilibili.com/video/BV1HZ4y1978a/</a> ）Come take a look, there are detailed tutorials inside</p>
+                            <p>So the following code follows:</p>
+                            <pre><code class="language-C++"><span class="hljs-comment">//This part is placed outside the main function</span>
+<span class="hljs-function">DLLIMPORT BOOL CALLBACK <span class="hljs-title">EnumWindowProc</span><span class="hljs-params">(_In_HWND hwnd, _In_LPARAM Lparm)</span><span class="hljs-comment">//Core!!! The process of embedding dynamic wallpapers into windows</span>
+</span>{
+  HWND hDefView = <span class="hljs-built_in">FindWindowEx</span>(hwnd, <span class="hljs-number">0</span>, <span class="hljs-string">&quot;SHELLDLL_DefView&quot;</span>, <span class="hljs-number">0</span>);
+  <span class="hljs-keyword">if</span>(hDefView!=<span class="hljs-number">0</span>){
+    HWND hWorkerW = <span class="hljs-built_in">FindWindowEx</span>(<span class="hljs-number">0</span>, hwnd, <span class="hljs-string">&quot;WorkerW&quot;</span>, <span class="hljs-number">0</span>);
+    <span class="hljs-built_in">ShowWindow</span>(hWorkerW, SW_HIDE);
+    <span class="hljs-keyword">return</span> FALSE;
+  }
+  <span class="hljs-keyword">return</span> TRUE;
+}
+  <span class="hljs-comment">//Please place the following part in the main function</span>
+  <span class="hljs-type">int</span> width=<span class="hljs-built_in">GetDeviceCaps</span>(<span class="hljs-built_in">GetDC</span>(<span class="hljs-number">0</span>), DESKTOPHORZRES), height=<span class="hljs-built_in">GetDeviceCaps</span>(<span class="hljs-built_in">GetDC</span>(<span class="hljs-number">0</span>), DESKTOPVERTRES);<span class="hljs-comment">//Get screen device resolution</span>
+  HWND hProgman = <span class="hljs-built_in">FindWindow</span>(<span class="hljs-string">&quot;Progman&quot;</span>, <span class="hljs-number">0</span>);
+  <span class="hljs-built_in">SendMessageTimeout</span>(hProgman, <span class="hljs-number">0x52C</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">100</span>, <span class="hljs-number">0</span>);<span class="hljs-comment">// Delay sending messages</span>
+  <span class="hljs-built_in">SetWindowPos</span>(hMshta, <span class="hljs-literal">NULL</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, width, height, SWP_NOZORDER);<span class="hljs-comment">//Set window size and position</span>
+  <span class="hljs-built_in">SetParent</span>(hMshta, hProgman);<span class="hljs-comment">//Set parent window</span>
+  <span class="hljs-built_in">EnumWindows</span>(EnumWindowProc, <span class="hljs-number">0</span>);<span class="hljs-comment">// Place this window behind the desktop</span>
+                            </code></pre>
+                            <p>After compiling and running the program, the dynamic wallpaper is launched, which is relatively simple</p>
+                        </blockquote>
+                    </blockquote>
+                    </blockquote>
+                    <h1 id="2turning-off-dynamic-wallpapers">2.Turning off dynamic wallpapers</h1>
+                    <blockquote>
+                        <p>This is even simpler, there are two ways to code:</p>
+                        <h1 id="2-1-method-traverse-using-enumchildwindowsrecommended">2-1 Method: Traverse using EnumChildWindows(recommended)</h1>
+                        <blockquote>
+                            <pre><code class="language-C++"><span class="hljs-comment">//What needs to be written outside the main function</span>
+<span class="hljs-function">DLLIMPORT BOOL CALLBACK <span class="hljs-title">StopDWPProc</span><span class="hljs-params">(_In_ HWND hWnd, _In_ LPARAM lparam)</span></span>{<span class="hljs-comment">//Stop callback function for dynamic wallpaper(enum traversal)</span>
+  <span class="hljs-type">char</span> Text[<span class="hljs-number">1145</span>];
+  <span class="hljs-built_in">GetClassName</span>(hWnd,Text,<span class="hljs-built_in">sizeof</span>(Text));
+  <span class="hljs-comment">//GetWindowText(hWnd,Text,GetWindowTextLength(hWnd)+1);</span>
+  <span class="hljs-keyword">if</span>(<span class="hljs-built_in">strcmp</span>(Text,<span class="hljs-string">&quot;HTML Application Host Window Class&quot;</span>)==<span class="hljs-number">0</span>) <span class="hljs-built_in">PostMessage</span>(hWnd,WM_CLOSE,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>);
+  <span class="hljs-keyword">return</span> FALSE;
+}
+<span class="hljs-comment">//What needs to be written when closing</span>
+HWND PROGMAN=<span class="hljs-built_in">FindWindow</span>(<span class="hljs-string">&quot;Progman&quot;</span>, <span class="hljs-number">0</span>);
+<span class="hljs-keyword">if</span>(PROGMAN) <span class="hljs-built_in">EnumChildWindows</span>(PROGMAN,StopDWPProc,<span class="hljs-literal">NULL</span>);
+                            </code></pre>
+                            <h1 id="2-2-method-taskkill-forces-end-of-process">2-2 Method: taskkill Forces End of Process</h1>
+                            <pre><code class="language-C++"><span class="hljs-built_in">WinExec</span>(<span class="hljs-string">&quot;taskkill.exe /F /IM mshta.exe&quot;</span>,SW_HIDE);
+                            </code></pre>
+                        </blockquote>
+                        <h1 id="2write-a-dynamic-wallpaper-program-using-wallpapercoredll">2.Write a dynamic wallpaper program using WallpaperCore.dll</h1>
+                        <blockquote>
+                            <h1 id="1start-dynamic-wallpaper">1.Start dynamic wallpaper</h1>
+                            <p>Currently, Wallpaper Core.dll only supports starting DP files and does not support direct startup, so it is necessary to write a DP file to the% temp% directory</p>
+                            <h1 id="1-1create-dp-file">1-1.Create DP file</h1>
+                            <p>The dp file format is as follows:&lt;t/f indicates whether sound is needed&gt;<full path of video file></p>
+                            <blockquote>
+                                <p>Example:</p>
+                                <pre><code class="language-Text">tC:\Video.mp4
+                                </code></pre>
+                                <p>This means that sound is required to play the C: \ Video.mp4 video
+                                This text needs to be written to a file in dp format, recommended to be placed in the Temp <a href="http://directory.It">directory.It</a> must be plain text and GBK encoded, otherwise there may be issues</p>
+                            </blockquote>
+                            <h1 id="1-2start-dp-file">1-2.Start DP file</h1>
+                            <blockquote>
+                                <p>After creating the dp file, you can use the StartDwp function of Wallpaper Core.dll to start the wallpaper file.Please include the &quot;Wallpaper Core \ dl.h&quot; file and link the library &quot;Wallpaper Core \ libWallpaper Core.a&quot; during compilation, otherwise the GCC compiler will not find the symbol</p>
+                                <p>Format used:</p>
+                                <pre><code class="language-C++"><span class="hljs-built_in">StartDwp</span>(&lt;Here is your dp file full <span class="hljs-built_in">path</span>(<span class="hljs-type">char</span> *)&gt;,&lt;whether it is in quiet <span class="hljs-built_in">mode</span>(no window prompt, boolean)&gt;);
+                                </code></pre>
+                                <p>Example:</p>
+                                <pre><code class="language-C++"><span class="hljs-built_in">StartDwp</span>(<span class="hljs-string">&quot;C:\\Users\\Admin\\Desktop\\1.dp&quot;</span>,<span class="hljs-literal">false</span>);
+                                </code></pre>
+                                <p>This code will start the 1.dp file in the C: \ Users \ Admin \ Desktop directory, without using quiet mode, and thus complete the startup of the dynamic wallpaper, which is very simple.StartDwp starts a thread, so the main function must always run</p>
+                            </blockquote>
+                        </blockquote>
+                        <h1 id="2turn-off-dynamic-wallpapers">2.Turn off dynamic wallpapers</h1>
+                        <blockquote>
+                            <p>This is the same, but I have already written the StopDWPProc callback function, and you only need two lines of code to terminate it:</p>
+                            <pre><code class="language-C++">HWND PROGMAN=<span class="hljs-built_in">FindWindow</span>(<span class="hljs-string">&quot;Progman&quot;</span>, <span class="hljs-number">0</span>);
+<span class="hljs-keyword">if</span>(PROGMAN)<span class="hljs-built_in">EnumChildWindows</span>(PROGMAN,StopDWPProc,<span class="hljs-literal">NULL</span>);
+                            </code></pre>
+                            <p>It's still relatively simple.Alright, that's all for this document.DWPT still needs further development.if you feel it's okay, click on the star</p>
+                        </blockquote>
+                    </blockquote>
+                    <h1 id="end">End</h1>
+                </blockquote>
+                <p><a href="#English">Jump to English Document</a></p>
+                <h1 id="中文">中文</h1>
+                <blockquote>
+                    <p>如有疑惑\建议，请转到<a href="https://github.com/BOffice-Excel/Excel-s-Dynamic-Wallpaper-Tools/issues">Issues</a>提交</p>
+                    <p>如要下载，请打开<a href="https://github.com/BOffice-Excel/Excel-s-Dynamic-Wallpaper-Tools/releases">Release</a></p>
+                </blockquote>
+                <h1 id="office-excel的动态壁纸工具">Office-Excel的动态壁纸工具</h1>
+                <blockquote>
+                    <p>介绍：这是一个用C++写的动态壁纸工具，目前已经可以开始使用了
+                    特别感谢 哔哩哔哩up主<a href="https://space.bilibili.com/39665558/">@偶尔有点小迷糊</a>（Uid39665558），参考项目：<a href="https://github.com/3150601355/VideoWallPaperDemo">https://github.com/3150601355/VideoWallPaperDemo</a></p>
+                    <p>编译环境：Windows 11 IDE：Dev-C++ 编译器：TDM-GCC 4.9.2 32-bit Release 可以放到更高的版本中编译，但是没必要，4.9.2就够了，编译时不需要做任何事情，我已经配置好了链接库</p>
+                    <p>现在有个非常好的一点，就是你可以通过包含WallpaperCore文件夹中的dll.h来制作你自己的动态壁纸工具了，记得链接库：libWallpaperCore.a
+                    提示：打开代码时建议使用ANSI（GBK）来打开，不然那里面的注释基本都会乱码</p>
+                    <p>注意事项：</p>
+                    <blockquote>
+                        <p>不建议使用Visual Studio编译，要改很多处地方，不然会报错，比如unsafe之类的<br>
+                        按理说能编译C++的都行，但是不建议，很可能会乱码或者报错<br>
+                        在旁边的Release中我已经有编译好的了，Windows 8 x86 ~ Windows 11 x64按理说都能用</p>
+                    </blockquote>
+                    <p>使用的头文件：stdio.h、io.h、windows.h、commctrl.h，就这些
+                    可以自己去程序内的帮助看看</p>
+                </blockquote>
+                <h1 id="使用wallpapercoredll进行开发">使用WallpaperCore.dll进行开发</h1>
+                <blockquote>
+                    <h1 id="一动态壁纸的原理简略介绍">一、动态壁纸的原理（简略介绍）</h1>
+                        <blockquote>
+                            <h1 id="1动态壁纸的启动">1.动态壁纸的启动</h1>
+                            <blockquote>
+                                <h1 id="1-1创建视频窗口">1-1.创建视频窗口</h1>
+                                <blockquote>
+                                    <p>在这里，我们使用<a href="https://learn.microsoft.com/zh-cn/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa">CreateProcessA函数</a>创建进程，这里以mshta.exe作为视频播放工具示范（ffplay也可以）</p>
+                                    <p>以下代码将会启动mshta.exe，不做其它的事情：</p>
+                                    <pre><code class="language-C++">  STARTUPINFOA sia,<span class="hljs-built_in">memset</span>(&amp;sia,<span class="hljs-number">0</span>,<span class="hljs-built_in">sizeof</span>(sia));<span class="hljs-comment">//初始化信息结构体</span>
+  PROCESS_INFORMATIONA pia;<span class="hljs-built_in">memset</span>(&amp;pia,<span class="hljs-number">0</span>,<span class="hljs-built_in">sizeof</span>(pia));
+  <span class="hljs-type">char</span> mshtaPath[MAX_PATH+<span class="hljs-number">5</span>];<span class="hljs-comment">//在这里请尽量设大点</span>
+  <span class="hljs-built_in">GetSystemDirectory</span>(mshtaPath,MAX_PATH);<span class="hljs-comment">//获取系统（System32）目录，64位系统下32位程序会变成SysWOW64目录//MAX_PATH替换为你的数组长度-5（最好）</span>
+  <span class="hljs-keyword">if</span>(mshtaPath[<span class="hljs-built_in">strlen</span>(mshtaPath)<span class="hljs-number">-1</span>]==<span class="hljs-string">&#x27;\\&#x27;</span>) <span class="hljs-built_in">strcat</span>(mshtaPath,<span class="hljs-string">&quot;mshta.exe&quot;</span>);
+  <span class="hljs-keyword">else</span> <span class="hljs-built_in">strcat</span>(mshtaPath,<span class="hljs-string">&quot;\\mshta.exe&quot;</span>);
+  <span class="hljs-keyword">if</span>(<span class="hljs-built_in">CreateProcess</span>(mshtaPath,<span class="hljs-literal">NULL</span>,<span class="hljs-literal">NULL</span>,<span class="hljs-literal">NULL</span>,<span class="hljs-literal">NULL</span>,<span class="hljs-literal">NULL</span>,<span class="hljs-literal">NULL</span>,<span class="hljs-literal">NULL</span>,&amp;sia,&amp;pia)!=<span class="hljs-number">0</span>){
+    <span class="hljs-comment">//成功启动进程</span>
+  }
+  <span class="hljs-keyword">else</span>{
+    <span class="hljs-comment">//启动进程失败</span>
+  }
+                                    </code></pre>
+                                    <p>如果你成功编译了程序，你会发现什么也没有，这是因为我们没有为mshta.exe编写视频播放的HTA文件（HTML应用程序，与HTML的语法差不多），视频网页格式如下：</p>
+                                    <pre><code class="language-HTML">  <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">META</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">&quot;content-type&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;text/html; charset=GBK&quot;</span>&gt;</span>
+    <span class="hljs-comment">&lt;!--这里是设置让mshta.exe读取HTA文件时使用GBK编码（默认UTF-8），如果你是用的是Visual Studio，可以不写上面这一行（VS默认UTF-8）--&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">&quot;x-ua-compatible&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;IE=9&quot;</span>/&gt;</span>
+    <span class="hljs-comment">&lt;!--这里是设置mshta.exe的IE版本，IE=&lt;版本号&gt;，可填写&quot;Edge&quot;，mshta.exe默认的版本不支持Video标签--&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>VideoPlayer<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+      <span class="hljs-comment">&lt;!--上面这一条实际用户也看不到，可以不写--&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">HTA:APPLICATION</span> <span class="hljs-attr">APPLICATIONNAME</span>=<span class="hljs-string">&quot;VideoPlayer&quot;</span><span class="hljs-attr">ID</span>=<span class="hljs-string">&quot;VideoPlayer&quot;</span> <span class="hljs-attr">BORDER</span>=<span class="hljs-string">&quot;none&quot;</span> <span class="hljs-attr">SHOWINTASKBAR</span>=<span class="hljs-string">&quot;no&quot;</span> <span class="hljs-attr">VERSION</span>=<span class="hljs-string">&quot;0.0&quot;</span>/&gt;</span>
+      <span class="hljs-comment">&lt;!--上面这一条设置无边框、不显示在任务栏、ID为VideoPlayer、版本为0.0、名称为VideoPlayer，版本、名称、ID可随意更改--&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width:100%;height:100%;left:0px;top:0px;position:fixed&quot;</span> <span class="hljs-attr">autoplay</span> <span class="hljs-attr">loop</span>[ <span class="hljs-attr">muted</span>]&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;&lt;这里填写视频的地址&gt;&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;video/mp4&quot;</span>&gt;</span>ERROR<span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
+      <span class="hljs-comment">&lt;!--上面这一条播放视频，请合理替换内部信息，如果添加 muted则表示静音--&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+                                    </code></pre>
+                                    <p>现在可以打开你编辑好的hta文件，这样你就能看到一个无边框的视频窗口了（Alt+F4退出）
+                                    接下来的代码为如何使用程序打开hta文件</p>
+                                    <pre><code class="language-C++">  STARTUPINFOA sia,<span class="hljs-built_in">memset</span>(&amp;sia,<span class="hljs-number">0</span>,<span class="hljs-built_in">sizeof</span>(sia));<span class="hljs-comment">//初始化信息结构体</span>
+  PROCESS_INFORMATIONA pia;<span class="hljs-built_in">memset</span>(&amp;pia,<span class="hljs-number">0</span>,<span class="hljs-built_in">sizeof</span>(pia));
+  <span class="hljs-type">char</span> mshtaPath[MAX_PATH+<span class="hljs-number">5</span>];<span class="hljs-comment">//在这里请尽量设大点</span>
+  <span class="hljs-built_in">GetSystemDirectory</span>(mshtaPath,MAX_PATH);<span class="hljs-comment">//获取系统（System32）目录，64位系统下32位程序会变成SysWOW64目录//MAX_PATH替换为你的数组长度-5（最好）</span>
+  <span class="hljs-keyword">if</span>(mshtaPath[<span class="hljs-built_in">strlen</span>(mshtaPath)<span class="hljs-number">-1</span>]==<span class="hljs-string">&#x27;\\&#x27;</span>) <span class="hljs-built_in">strcat</span>(mshtaPath,<span class="hljs-string">&quot;mshta.exe &quot;</span>);
+  <span class="hljs-keyword">else</span> <span class="hljs-built_in">strcat</span>(mshtaPath,<span class="hljs-string">&quot;\\mshta.exe &quot;</span>);
+  <span class="hljs-keyword">if</span>(<span class="hljs-built_in">CreateProcess</span>(mshtaPath,&lt;这里写你的hta文件路径，如果有特殊字符或符号要加引号&gt;,<span class="hljs-literal">NULL</span>,<span class="hljs-literal">NULL</span>,<span class="hljs-literal">NULL</span>,<span class="hljs-literal">NULL</span>,<span class="hljs-literal">NULL</span>,<span class="hljs-literal">NULL</span>,&amp;sia,&amp;pia)!=<span class="hljs-number">0</span>){
+    <span class="hljs-comment">//成功启动进程</span>
+  }
+  <span class="hljs-keyword">else</span>{
+    <span class="hljs-comment">//启动进程失败</span>
+  }
+                                    </code></pre>
+                                    <p>编译运行后你就可以看到程序打开了一个视频窗口了，这时你就已经成功了一半了，如果出现没有窗口创建的情况请检查视频文件路径</p>
+                                </blockquote>
+                                <h1 id="1-2设置背景">1-2.设置背景</h1>
+                                <blockquote>
+                                    <p>现在有一个问题：如何获取mshta.exe创建的窗口句柄？</p>
+                                    <p>DWPT中使用的方法是FindWindow，当然，这种情况仅适用于只有一个mshta.exe窗口，通过Spy++工具我们可以得知：mshta.exe的窗口类名是HTML Application Host Window Class</p>
+                                    <p>所以我们就可以在创建进程代码的后面加上以下代码：</p>
+                                    <pre><code class="language-C++">  HWND hMshta=<span class="hljs-built_in">FindWindow</span>(<span class="hljs-string">&quot;HTML Application Host Window Class&quot;</span>, <span class="hljs-number">0</span>);
+  <span class="hljs-keyword">while</span>(hMshta==<span class="hljs-literal">NULL</span>){<span class="hljs-comment">//一直到找到mshta的窗口为止</span>
+    <span class="hljs-built_in">Sleep</span>(<span class="hljs-number">500</span>);
+    hMshta=<span class="hljs-built_in">FindWindow</span>(<span class="hljs-string">&quot;HTML Application Host Window Class&quot;</span>, <span class="hljs-number">0</span>);
+  }
+  <span class="hljs-comment">//找到了</span>
+                                    </code></pre>
+                                    <p>mshta.exe的窗口句柄存放在hMshta中，好了，现在第一个问题解决了，第二个问题：如何放进去</p>
+                                    <p>这里我使用的方法来自 哔哩哔哩up主<a href="https://space.bilibili.com/39665558/">@偶尔有点小迷糊</a>（Uid39665558）</p>
+                                    <p>首先向类名为Progman的窗口发送0x52C消息，使用SendMessageTimeout（SendMessage我不知道行不行）发送即可，然后调整mshta.exe窗口大小，再设置父窗口为Progman，最后隐藏类名为WorkerW的窗口即可，
+                                    看得一头雾水的可以去<a href="https://www.bilibili.com/video/BV1HZ4y1978a/">迷糊老师的这期视频</a>来看看，里面有详细的教程</p>
+                                    <p>所以再后面的代码如下：</p>
+                                    <pre><code class="language-C++">  <span class="hljs-comment">//这一部分放在main函数外</span>
+  <span class="hljs-function">DLLIMPORT BOOL CALLBACK <span class="hljs-title">EnumWindowProc</span><span class="hljs-params">(_In_ HWND hwnd, _In_ LPARAM Lparam)</span><span class="hljs-comment">//核心！！！动态壁纸的嵌入窗口过程 </span>
+  </span>{
+    HWND hDefView = <span class="hljs-built_in">FindWindowEx</span>(hwnd, <span class="hljs-number">0</span>, <span class="hljs-string">&quot;SHELLDLL_DefView&quot;</span>, <span class="hljs-number">0</span>);
+    <span class="hljs-keyword">if</span> (hDefView != <span class="hljs-number">0</span>) {
+      HWND hWorkerw = <span class="hljs-built_in">FindWindowEx</span>(<span class="hljs-number">0</span>, hwnd, <span class="hljs-string">&quot;WorkerW&quot;</span>, <span class="hljs-number">0</span>);
+      <span class="hljs-built_in">ShowWindow</span>(hWorkerw, SW_HIDE);
+      <span class="hljs-keyword">return</span> FALSE;
+    }
+    <span class="hljs-keyword">return</span> TRUE;
+  }
+  <span class="hljs-comment">//后面的部分请放在main函数中</span>
+  <span class="hljs-type">int</span> width=<span class="hljs-built_in">GetDeviceCaps</span>(<span class="hljs-built_in">GetDC</span>(<span class="hljs-number">0</span>), DESKTOPHORZRES),height=<span class="hljs-built_in">GetDeviceCaps</span>(<span class="hljs-built_in">GetDC</span>(<span class="hljs-number">0</span>), DESKTOPVERTRES);<span class="hljs-comment">//获取屏幕设备分辨率 </span>
+  HWND hProgman = <span class="hljs-built_in">FindWindow</span>(<span class="hljs-string">&quot;Progman&quot;</span>, <span class="hljs-number">0</span>);
+  <span class="hljs-built_in">SendMessageTimeout</span>(hProgman, <span class="hljs-number">0x52C</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">100</span>, <span class="hljs-number">0</span>);<span class="hljs-comment">//延时发送消息 </span>
+  <span class="hljs-built_in">SetWindowPos</span>(hMshta, <span class="hljs-literal">NULL</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, width, height, SWP_NOZORDER);<span class="hljs-comment">//设置窗口大小和位置 </span>
+  <span class="hljs-built_in">SetParent</span>(hMshta, hProgman);<span class="hljs-comment">//设置父窗口 </span>
+  <span class="hljs-built_in">EnumWindows</span>(EnumWindowProc, <span class="hljs-number">0</span>);<span class="hljs-comment">//将这个窗口放到桌面的后边 </span>
+                                    </code></pre>
+                                    <p>编译运行程序后，动态壁纸就被启动了，还是比较简单的</p>
+                                </blockquote>
+                            </blockquote>
+                            <h1 id="2动态壁纸的关闭">2.动态壁纸的关闭</h1>
+                            <blockquote>
+                                <p>这个就更简单了，代码两种方法：</p>
+                                <h1 id="2-1方法使用enumchildwindows遍历推荐">2-1方法：使用EnumChildWindows遍历（推荐）</h1>
+                                <pre><code class="language-C++"><span class="hljs-comment">//main函数外需要写的</span>
+<span class="hljs-function">DLLIMPORT BOOL CALLBACK <span class="hljs-title">StopDWPProc</span><span class="hljs-params">(_In_ HWND hWnd,_In_ LPARAM lparam)</span></span>{<span class="hljs-comment">//停止动态壁纸的回调函数（Enum遍历） </span>
+  <span class="hljs-type">char</span> Text[<span class="hljs-number">1145</span>];
+  <span class="hljs-built_in">GetClassName</span>(hWnd,Text,<span class="hljs-built_in">sizeof</span>(Text));
+  <span class="hljs-comment">//GetWindowText(hWnd,Text,GetWindowTextLength(hWnd)+1);</span>
+  <span class="hljs-keyword">if</span>(<span class="hljs-built_in">strcmp</span>(Text,<span class="hljs-string">&quot;HTML Application Host Window Class&quot;</span>)==<span class="hljs-number">0</span>) <span class="hljs-built_in">PostMessage</span>(hWnd,WM_CLOSE,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>);
+  <span class="hljs-keyword">return</span> FALSE;
+}
+<span class="hljs-comment">//关闭时需要写的</span>
+HWND PROGMAN=<span class="hljs-built_in">FindWindow</span>(<span class="hljs-string">&quot;Progman&quot;</span>, <span class="hljs-number">0</span>);
+<span class="hljs-keyword">if</span>(PROGMAN) <span class="hljs-built_in">EnumChildWindows</span>(PROGMAN,StopDWPProc,<span class="hljs-literal">NULL</span>);
+                                </code></pre>
+                                <h1 id="2-2方法taskkill强制结束进程">2-2方法：taskkill强制结束进程</h1>
+                                <pre><code class="language-C++"><span class="hljs-built_in">WinExec</span>(<span class="hljs-string">&quot;taskkill.exe /F /IM mshta.exe&quot;</span>,SW_HIDE);
+                                </code></pre>
+                            </blockquote>
+                        </blockquote>
+                        <h1 id="二使用wallpapercoredll编写动态壁纸程序">二、使用WallpaperCore.dll编写动态壁纸程序</h1>
+                        <blockquote>
+                        <h1 id="1启动动态壁纸">1.启动动态壁纸</h1>
+                        <blockquote>
+                            <p>目前WallpaperCore.dll仅支持启动dp文件，不支持直接启动，所以还需要写一个dp文件到%temp%目录</p>
+                            <h1 id="1-1创建dp文件">1-1.创建dp文件</h1>
+                            <blockquote>
+                                <p>dp文件格式如下：&lt;t/f表示是否需要声音&gt;&lt;视频文件完整路径&gt;</p>
+                                <p>例：</p>
+                                <pre><code class="language-Text">tC:\Video.mp4
+                                </code></pre>
+                                <p>这表示需要声音播放C:\Video.mp4视频
+                                这段文本需要写入至一个格式为dp的文件，推荐放在Temp目录中，必须是纯文本、GBK编码，否则可能会有问题</p>
+                            </blockquote>
+                            <h1 id="1-2启动dp文件">1-2.启动dp文件</h1>
+                            <blockquote>
+                                <p>在创建好dp文件后，你就可以使用WallpaperCore.dll的StartDwp函数来启动壁纸文件了，编译时请包含&quot;WallpaperCore\dll.h&quot;文件并链接库&quot;WallpaperCore\libWallpaperCore.a&quot;，否则GCC编译器会找不到符号</p>
+                                <p>使用格式：</p>
+                                <pre><code class="language-C++"><span class="hljs-built_in">StartDwp</span>(&lt;dp文件完整路径（<span class="hljs-type">char</span>*）&gt;,&lt;是否为安静模式（不提示窗口，<span class="hljs-type">bool</span>）&gt;);
+                                </code></pre>
+                                <p>例：</p>
+                                <pre><code class="language-C++"><span class="hljs-built_in">StartDwp</span>(<span class="hljs-string">&quot;C:\\Users\\Admin\\Desktop\\1.dp&quot;</span>,<span class="hljs-literal">false</span>);
+                                </code></pre>
+                                <p>这段代码会启动C:\Users\Admin\Desktop目录中的1.dp文件，不使用安静模式，这样就完成的动态壁纸的启动，非常的简单。StartDwp会启动一个线程，所以main函数一定要一直保持运行</p>
+                            </blockquote>
+                        </blockquote>
+                        <h1 id="2关闭动态壁纸">2.关闭动态壁纸</h1>
+                        <blockquote>
+                            <p>这个是一样的，只不过我已经写了StopDWPProc回调函数，你只需要两行代码就可以终止：</p>
+                            <pre><code class="language-C++">HWND PROGMAN=<span class="hljs-built_in">FindWindow</span>(<span class="hljs-string">&quot;Progman&quot;</span>, <span class="hljs-number">0</span>);
+<span class="hljs-keyword">if</span>(PROGMAN) <span class="hljs-built_in">EnumChildWindows</span>(PROGMAN,StopDWPProc,<span class="hljs-literal">NULL</span>);
+                            </code></pre>
+                            <p>还是比较简单的，好了，以上就是这篇文档的全部内容，DWPT还有待发展，如果感觉可以的话点个star吧</p>
+                        </blockquote>
+                    </blockquote>
+                    <h1 id="结束">结束</h1>
+                </blockquote>
+            </div>
+        </div>
+    </body>
+</html>

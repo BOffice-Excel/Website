@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="images/favicon.ico">
+        <title>About DWPT | A Dynamic Wallpaper Tool</title>
+        <style>
+            body {
+                font-family: 'Hack Nerd Font';
+            }
+            .navigation{
+                list-style-type: none;
+                list-style-position: inside;
+                margin: 0;
+                padding: 0;
+            }
+            .navigation li{
+                text-align: center;
+                padding: 0;
+                transition: transform .1s linear;
+                position: relative;
+                display: list-item;
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-top: 20px;
+            }
+            .navigation li a:hover{
+                color:#367BF0;
+            }
+            .dnl{
+                float: left;
+            }
+            *{
+                color:white
+            }
+            img{
+                image-rendering: pixelated;
+            }
+            .navigation li a{
+                text-decoration: solid;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="titleBar" style="position:fixed;top:0px;left:0px;width:100%;z-index:9999">
+            <a href="index.html" style="background-image: url('images/favicon.ico');width:60px;height:60px;margin-left:5%;display:block" class="dnl"></a>
+            <!--<span class="dnl" style="margin-top:20px;margin-left:10px">DWPT(A dynamic wallpaper tool)</span>-->
+            <ul id="PageChoose" class="navigation" style="right:20px;position:absolute">
+                <li class="dnl"><a href="index.html">HOME</a></li>
+                <li class="dnl"><a href="get-dwpt.html">GET DWPT</a></li>
+                <li class="dnl"><a href="docs.html">DOCUMENTATION</a></li>
+                <li class="dnl"><a href="developers.html">DEVELOPERS</a></li>
+                <li class="dnl"><a style="color:#367BF0;user-select: none;cursor:default;">ABOUT</a></li>
+            </ul>
+        </div>
+        <div id="main" style="left:0px;top:0px;height:100%;width:100%;background-color:black;position:absolute">
+            <div style="padding-left:10%;width:80%;padding-top:50px">
+                <center><h1>ABOUT US</h1></center>
+                <p>Program Writer: Office-Excel</p>
+                <p>Program Language: C++</p>
+                <p>Program used Library: <br>
+                    1.windows.h(API, TDM-GCC 4.9.2 on Windows Lib)<br>
+                    2.commctrl.h(TDM-GCC 4.9.2 on Windows Lib)<br>
+                    3.stdio.h(Standard library, TDM-GCC 4.9.2 on Windows Lib)<br>
+                    4.io.h(TDM-GCC 4.9.2 on Windows Lib)<br>
+                    5.HelpDWPT/dll.h(I wrote it myself)<br>
+                    6.WallpaperCore/dll.h(I wrote it myself, Public)
+                </p>
+                <p>Program Writer's <a href="https://www.bilibili.com/" target="_blank">Bilibili</a> Homepage: <a href="https://space.bilibili.com/1439352366/" target="_blank">Click here!</a></p>
+                <p>Program Writer's <a href="https://github.com/" target="_blank">Github</a> Homepage: <a href="https://github.com/BOffice-Excel" target="_blank">Click here!</a></p>
+                <p>Program Writer's Email: 13392621401@189.cn</p>
+                <p>Program Tester: She_Fa21</p>
+                <p>Program Tester's <a href="https://www.bilibili.com/" target="_blank">Bilibili</a> Homepage: <a href="https://space.bilibili.com/3494376835648149/" target="_blank">Click here!</a></p>
+                <p>Project Repository: <a href="https://github.com/BOffice-Excel/Excel-s-Dynamic-Wallpaper-Tools" target="_blank">Click here!</a></p>
+                <p>Project Homepage: <a href="index.html" target="_blank">Click here!</a></p>
+                <p>Project Open source protocol: <a href="https://www.gnu.org/licenses/licenses.html#LGPL" target="_blank">GNU LGPL(LESSER GENERAL PUBLIC LICENSE)</a></p>
+                <img style="position:absolute;left:60%;top:10%;width:40%;height:auto" src="images/favicon.ico" alt="Dynamic Wallpaper Tools"/>
+                <span style="position:absolute;left:72%;top:82%">Dynamic Wallpaper Tools(DWPT)</span>
+            </div>
+        </div>
+    </body>
+</html>

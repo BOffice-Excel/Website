@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="images/favicon.ico">
+        <title>DOCUMENTATION | A Dynamic Wallpaper Tool</title>
+        <style>
+            body {
+                font-family: 'Hack Nerd Font';
+            }
+            .navigation{
+                list-style-type: none;
+                list-style-position: inside;
+                margin: 0;
+                padding: 0;
+            }
+            .navigation li{
+                text-align: center;
+                padding: 0;
+                transition: transform .1s linear;
+                position: relative;
+                display: list-item;
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-top: 20px;
+            }
+            .navigation li a:hover{
+                color:#367BF0;
+            }
+            .dnl{
+                float: left;
+            }
+            *{
+                color:white
+            }
+            img{
+                image-rendering: pixelated;
+            }
+            .navigation li a{
+                text-decoration: solid;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="titleBar" style="position:fixed;top:0px;left:0px;width:100%;z-index:9999">
+            <a href="index.html" style="background-image: url('images/favicon.ico');width:60px;height:60px;margin-left:5%;display:block" class="dnl"></a>
+            <!--<span class="dnl" style="margin-top:20px;margin-left:10px">DWPT(A dynamic wallpaper tool)</span>-->
+            <ul id="PageChoose" class="navigation" style="right:20px;position:absolute">
+                <li class="dnl"><a href="index.html">HOME</a></li>
+                <li class="dnl"><a href="get-dwpt.html">GET DWPT</a></li>
+                <li class="dnl"><a style="color:#367BF0;user-select: none;cursor:default;">DOCUMENTATION</a></li>
+                <li class="dnl"><a href="developers.html">DEVELOPERS</a></li>
+                <li class="dnl"><a href="about.html">ABOUT</a></li>
+            </ul>
+        </div>
+        <div id="main" style="left:0px;top:0px;height:3150px;width:100%;background-color:black;position:absolute">
+            <div style="padding-left:10%;width:80%;">
+                <center style="font-size:50px;padding-top: 70px"><span>Why choose us?</span><br></center>
+                <p style="font-weight: lighter;">Advantages of DWPT:<br>
+                    1. <strong>Lightweight</strong><br>
+                    In versions of Windows 7 and above, DWPT does not require any other miscellaneous libraries except for the WinAPI library and HelpDWPT.dll (DWPT Help Library), WallpaperCore.dll (Wallpaper Core Library), and the DWPT main program is less than 1Mib (excluding installation and uninstallation programs), which is smaller than the program compiled by writing a Hello World program using the iostream library, and does not rely on the Visual C++runtime library<br>
+                    2. <strong>Concise interface</strong><br>
+                    The user interface of DWPT has no advertisements and will not slow down or slow down your computer. When not needed, you can also hide program icons in the system tray, which is very user-friendly<br>
+                    3. <strong>Better support</strong><br>
+                    The video playback tool for DWPT is mshta.exe (Microsoft HTML application). Don't question why I use this (because I don't know how to write a player) instead of ffplay.exe. The reason is that ffplay.exe is indeed too large, over 100 MiB, larger than the main program, and I chose 32-bit compilation, so 32-bit Windows can also be used<br>
+                    So, if you want to choose a lightweight, simple, ad free dynamic wallpaper software, choose DWPT<br>
+                </p>
+                <center style="font-size:50px;padding-top: 70px"><span>How to use?</span><br></center>
+                <p style="font-weight: lighter;">
+                    The opening method of DWPT is very simple. The first step is to open the program without allowing administrator privileges. This program has removed the need for administrator identity since 0.0.7.2 and later<br>
+                    First - How to <strong>start dynamic wallpaper</strong>:<br>
+                    1. Click on the 'Create Profile' button<br>
+                    2. Choose a save location (remember to enter the name of the saved file)<br>
+                    3. Choose one of your videos and remember to click on it to make it selected<br>
+                    4. When asked if you need sound, you can click "Yes" or "No" to disable or enable the sound<br>
+                    5. At this point, the configuration file has been created. You can click "Yes" to immediately use this configuration file, or click "No" to put this file aside for now<br>
+                    <br>
+                    Second - If I created a configuration file last time, how to <strong>use the previous configuration</strong>:<br>
+                    1. Click on the 'Open Profile' button<br>
+                    2. Select the configuration file you created last time<br>
+                    3. When the pop-up asks if you want to continue, please make sure if there are any other mshta.exe processes that are not related to DWPT running. If not, click "Yes". If there are, go check if they are important. If they are not important, close them. If they are important, don't open them yet<br>
+                    <br>
+                    Third -  What should I do if I want to <strong>modify the content of the configuration file</strong>:<br>
+                    1. Click on the 'Modify Configuration File' button<br>
+                    2. Select your configuration file<br>
+                    3. When you enter the editing page, you can start modifying. You can click "Yes" or "No" to modify, or "Cancel" to stop modifying<br>
+                    4. Continue with the third step until the modifications are completed<br>
+                    5. Choose whether to save<br>
+                    6. Done! <br>
+                    <br>
+                    Fourth - I don't want to show wallpaper. What should I do if I <strong>stop it</strong><br>
+                    1. Confirm that there is no mshta.exe running on your computer that is unrelated to DWPT.<br>
+                    2. Click on "Stop Dynamic Wallpaper"<br>
+                    3. Click confirm and select 'Yes' in the pop-up box to stop the dynamic wallpaper<br>
+                    <br>
+                    Fifth - How to <strong>set \ modify the position of default items</strong>:<br>
+                    1. Click on "Global Settings"<br>
+                    2. Click on "Edit", select the configuration file you want to set as the default option, and click OK<br>
+                    <br>
+                    Sixth -  What should I do if I want to <strong>start dynamic wallpaper immediately after booting up</strong>: <br>
+                    1. Please ensure that you have set the default settings. If not, please refer to "Five"<br>
+                    2. Click on "Global Settings"<br>
+                    3. Select the "Self start upon startup" and "Start dynamic wallpaper at startup" checkbox to check<br>
+                </p>
+                <center style="font-size:50px;padding-top: 70px"><span>Q & A</span><br></center>
+                <p style="font-weight: lighter;">
+                    Question&Answer:<br>
+                    Q: Why don't you use CLR to create windows? <br>
+                    Answer: Because we need to take care of some special groups of people who cannot install the Visual C++runtime library, such as She_Fa21 (my friend). If we don't install VC, it will prompt that the DLL is missing, and gcc compiles smaller<br><br>
+                    Q: Why are the windows and controls you create in Win11 style and DPI not an issue while I am not? <br>
+                    Answer: I have also thought about this question. I collected a lot of information online and practiced for a long time before figuring out this method. For your question, I have the following solutions:<br><br>
+                        For the issue of controls being outdated:<br>
+                            Visual Studio: Please add the following code before:<br>
+                                #ifdef _UNICODE<br>
+                                #if defined _M_IX86<br>
+                                #pragma comment(linker,"/manifestdependency:\"type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' processorArchitecture='x86' publicKeyToken='6595b64144ccf1df' language='*'\"")<br>
+                                #elif defined _M_X64<br>
+                                #pragma comment(linker,"/manifestdependency:\"type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' processorArchitecture='amd64' publicKeyToken='6595b64144ccf1df' language='*'\"")<br>
+                                #else<br>
+                                #pragma comment(linker,"/manifestdependency:\"type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' processorArchitecture='*' publicKeyToken='6595b64144ccf1df' language='*'\"")<br>
+                                #endif<br>
+                                #endif<br>
+                            Dev-C++: Compared to Visual Studio, the operation of Dev is simpler. Simply check "Supports Windows XP themes" in the project [P] ->project properties [O]<br><br>
+                        For the issue of incorrect DPI display:<br>
+                                Microsoft related documents: https://learn.microsoft.com/zh-cn/windows/win32/api/winuser/nf-winuser-setprocessdpiaware/<br>
+                                Visual Studio: Add code directly at the beginning of the program: Set ProcessDPIAware();<br>
+                                Dev-C++: Please add the following code at the beginning of the program:<br>
+                                    typedef BOOL WINAPI (*SPDA)(VOID);<br>
+                                    SPDA SetProcessDPIAware;<br>
+                                    HMODULE hModule = LoadLibrary("user32.dll");<br>
+                                    if(hModule){//Exception handling<br>
+                                        SetProcessDPIAware = (SPDA)GetProcAddress(hModule,"SetProcessDPIAware");// Tip: The SetProcessDPIAware function was added to Windows Vista<br>
+                                        if(SetProcessDPIAware) SetProcessDPIAware();//Non abnormal state<br>
+                                    }<br>
+                                    //The GCC version used by Dev-C++ is 4.9.2, and this API has been added to the new version of GCC<br>
+                            That's it! <br><br>
+                    Q: What should I do if there is a failure to create a window or register a window class?<br>
+                    Answer: Please try downloading this program again. If it still doesn't work, then I have no choice<br><br>
+                    Q: Why is the font so ugly? <br>
+                    Answer: The font I use when writing code is user-defined, which may not look good because some fonts do not support Chinese. I use CreateFontA to load fonts, so you can take a look at the CreateFontA function in Microsoft's development documentation<br>
+                </p>
+                <center style="font-size:50px;padding-top: 70px"><span>ABOUT DWPT</span><br></center>
+                <p style="font-weight: lighter;">About DWPT:<br>
+                    Author: Office-Excel<br>
+                    Reference video (Bilibili video number): BV1HZ4y1978a, address: https://www.bilibili.com/video/BV1HZ4y1978a/<br>
+                    Code editing tool used: Dev-C++Code language used: C++. Most commonly used libraries: windows.h<br>
+                    Window creation: Windows API (not a dialog box in the resource file, as I don't know how to use it)<br>
+                    DWPT project properties:<br>
+                        Name: DWPT (Dynamic Wallpaper Tools)<br>
+                        Project start date: 2024/04/21<br>
+                        Project objective: To create a pure and simple dynamic wallpaper tool<br>
+                        Why did the author do this stupid thing: just for fun, he wrote a few hundred lines of code casually<br>
+                        Dp file structure:<br>
+                            If you open the dp file with Notepad<br>
+                                You will find that the first character is always 't' or 'f', which represents whether the sound is enabled or not. f=disabled, t=enabled<br>
+                                The following is the absolute path of the video, and the text should theoretically be stored using GBK encoding, so it supports Chinese<br>
+                    <br>
+                        The principle of starting dynamic wallpaper in DWPT:<br>
+                            1. Read in file<br>
+                            2. Check if sound is enabled<br>
+                            3. Store the absolute path of the video in VP (char array)<br>
+                            4. Splice the preset text and write it to the %temp%\Temporary.hta file<br>
+                            5. Start the process mshta.exe<br>
+                            6. Send 0x52C signal to window with class name Progman<br>
+                            7. Find the second WorkerW window and hide it<br>
+                            8. Set the window with the class name Progman as the parent window of the mshta.exe window<br>
+                            9. Done! <br>
+                    <br>
+                    Author's Bilibili account: Office-Excel (Address: https://space.bilibili.com/1439352366/)
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
